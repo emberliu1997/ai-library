@@ -299,9 +299,10 @@ function TimelineCard({ item, index, isBookmarked, onBookmarkToggle, onSelectBoo
             </a>
           </motion.div>
 
-          {/* Why-panel — outer div handles position, inner handles animation */}
+          {/* Why-panel — desktop only (no room on mobile) */}
           <div
             aria-hidden="true"
+            className="hidden lg:block"
             style={{ position: 'absolute', left: 'calc(100% + 20px)', top: '50%', transform: 'translateY(-50%)', width: 288, zIndex: 30, pointerEvents: 'none' }}
           >
             <AnimatePresence>
@@ -395,9 +396,9 @@ export function StartHere({ items, isBookmarked, onBookmarkToggle, onSelectBook 
   const progress = explored.size / sorted.length
 
   return (
-    <div className="px-8 pt-10 pb-20">
+    <div className="px-4 sm:px-8 pt-8 sm:pt-10 pb-20">
       {/* Header */}
-      <div className="mb-12">
+      <div className="mb-10 sm:mb-12">
         <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: '#C8974A', letterSpacing: '0.18em' }}>
           {t('start_here_label')}
         </p>
@@ -430,7 +431,7 @@ export function StartHere({ items, isBookmarked, onBookmarkToggle, onSelectBook 
       </div>
 
       {/* Timeline */}
-      <div style={{ maxWidth: 520 }}>
+      <div style={{ maxWidth: 520, width: '100%' }}>
         {sorted.map((item, i) => (
           <TimelineCard
             key={item.title}
@@ -455,7 +456,7 @@ export function StartHere({ items, isBookmarked, onBookmarkToggle, onSelectBook 
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="mt-6 rounded-2xl px-6 py-5"
-            style={{ maxWidth: 520, background: 'rgba(200,151,74,0.05)', border: '1px solid rgba(200,151,74,0.2)' }}
+            style={{ maxWidth: 520, width: '100%', background: 'rgba(200,151,74,0.05)', border: '1px solid rgba(200,151,74,0.2)' }}
           >
             <p className="text-xs font-medium uppercase tracking-widest mb-1" style={{ color: '#C8974A', letterSpacing: '0.18em' }}>
               {t('start_all_explored_title')}

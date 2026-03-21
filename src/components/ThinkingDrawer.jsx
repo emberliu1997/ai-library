@@ -56,7 +56,7 @@ export function ThinkingDrawer({ item, onClose }) {
               right: 0,
               height: '100%',
               width: '100%',
-              maxWidth: 440,
+              maxWidth: 480,
               background: '#0E0D0B',
               borderLeft: '1px solid #1F1D1A',
               zIndex: 50,

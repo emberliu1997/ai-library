@@ -33,11 +33,11 @@ function Pill({ label, isActive, onClick }) {
 
 function FilterRow({ label, children }) {
   return (
-    <div className="flex items-start gap-3">
+    <div className="flex items-start gap-2 sm:gap-3">
       <span
         className="flex-shrink-0 pt-1"
         style={{
-          width: 52,
+          width: 46,
           fontSize: 10,
           fontWeight: 500,
           textTransform: 'uppercase',
@@ -48,8 +48,14 @@ function FilterRow({ label, children }) {
       >
         {label}
       </span>
-      <div className="flex flex-wrap gap-1.5">
-        {children}
+      {/* Horizontally scrollable on mobile */}
+      <div
+        className="overflow-x-auto flex-1 min-w-0"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
+      >
+        <div className="flex gap-1.5 flex-nowrap pb-0.5">
+          {children}
+        </div>
       </div>
     </div>
   )
@@ -89,7 +95,7 @@ export function Reference({
 
       {/* ── Sticky filter bar ────────────────────────── */}
       <div
-        className="sticky top-0 z-20 px-8"
+        className="sticky top-[52px] lg:top-0 z-20 px-4 sm:px-8"
         style={{
           background: 'var(--th-filter-bar)',
           borderBottom: '1px solid var(--th-border-sub)',
@@ -117,7 +123,7 @@ export function Reference({
               placeholder={t('search_placeholder')}
               className="w-full pl-9 pr-7 py-2 rounded-lg outline-none"
               style={{
-                fontSize: 13,
+                fontSize: 16, /* Prevent iOS auto-zoom on focus */
                 background: 'var(--th-surface)',
                 border: '1px solid var(--th-border)',
                 color: 'var(--th-text)',
@@ -271,7 +277,7 @@ export function Reference({
       </div>
 
       {/* ── Content ──────────────────────────────────── */}
-      <div className="px-8 pt-6 pb-16">
+      <div className="px-4 sm:px-8 pt-6 pb-16">
         {items.length === 0 ? (
           <div className="flex items-center justify-center py-24">
             <p style={{ fontSize: 14, color: 'var(--th-text-3)' }}>{t('no_results')}</p>

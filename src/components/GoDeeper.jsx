@@ -61,8 +61,8 @@ function SpotlightCard({ item, stagePick }) {
   return (
     <a
       {...linkProps}
-      className="group block relative rounded-2xl overflow-hidden mb-8"
-      style={{ textDecoration: 'none', height: 420 }}
+      className="group block relative rounded-2xl overflow-hidden mb-8 h-[220px] sm:h-[320px] lg:h-[420px]"
+      style={{ textDecoration: 'none' }}
       aria-label={`${stagePick}: ${item.title}`}
     >
       {/* Background gradient */}
@@ -87,7 +87,7 @@ function SpotlightCard({ item, stagePick }) {
       <div className="absolute inset-x-0 bottom-0" style={{ height: '45%', background: 'linear-gradient(to top, rgba(8,7,6,0.7), transparent)' }} />
 
       {/* Text — bottom-left */}
-      <div className="absolute inset-0 flex flex-col justify-end" style={{ padding: '28px 32px' }}>
+      <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-7">
         <div className="flex items-center gap-2 mb-3">
           <div style={{ width: 16, height: 1, background: '#C8974A' }} />
           <span className="text-xs font-medium uppercase tracking-widest" style={{ color: '#C8974A', letterSpacing: '0.2em' }}>
@@ -141,7 +141,7 @@ export function GoDeeper({
     : STAGE_IDS
 
   return (
-    <div className="px-8 pt-10 pb-20">
+    <div className="px-4 sm:px-8 pt-8 sm:pt-10 pb-20">
       {/* Header */}
       <div className="mb-10">
         <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: '#C8974A', letterSpacing: '0.18em' }}>

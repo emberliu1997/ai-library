@@ -1,4 +1,4 @@
-import { Sun, Moon } from 'lucide-react'
+import { Sun, Moon, X } from 'lucide-react'
 import { useTheme } from '../context/ThemeContext'
 import { useLanguage } from '../context/LanguageContext'
 
@@ -17,6 +17,8 @@ export function Sidebar({
   activeStage,
   onStageChange,
   allItems,
+  mobileOpen = false,
+  onMobileClose,
 }) {
   const { theme, setTheme } = useTheme()
   const { lang, setLang, t } = useLanguage()
@@ -26,25 +28,44 @@ export function Sidebar({
   return (
     <aside
       aria-label="Site navigation"
-      className="fixed top-0 left-0 h-screen flex flex-col z-30 overflow-hidden"
-      style={{ width: 240, background: 'var(--th-sidebar)', borderRight: '1px solid var(--th-sidebar-b)', transition: 'background 0.25s ease' }}
+      className={`fixed top-0 left-0 h-screen flex flex-col z-30 overflow-hidden
+        transition-transform duration-300 ease-out
+        lg:translate-x-0
+        ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}`}
+      style={{
+        width: 240,
+        background: 'var(--th-sidebar)',
+        borderRight: '1px solid var(--th-sidebar-b)',
+      }}
     >
-      {/* Brand */}
-      <div className="px-5 pt-7 pb-5" style={{ borderBottom: '1px solid var(--th-border-sub)' }}>
-        <p
-          className="text-xs tracking-[0.2em] uppercase mb-1"
-          style={{ color: '#C8974A', fontFamily: 'DM Sans', letterSpacing: '0.16em' }}
-          aria-hidden="true"
+      {/* Brand + mobile close */}
+      <div className="px-5 pt-7 pb-5 flex items-start justify-between" style={{ borderBottom: '1px solid var(--th-border-sub)' }}>
+        <div>
+          <p
+            className="text-xs tracking-[0.2em] uppercase mb-1"
+            style={{ color: '#C8974A', fontFamily: 'DM Sans', letterSpacing: '0.16em' }}
+            aria-hidden="true"
+          >
+            AI Library
+          </p>
+          <p
+            className="text-xl leading-tight"
+            style={{ fontFamily: 'Instrument Serif, Georgia, serif', color: 'var(--th-text)', fontStyle: 'italic' }}
+            aria-label="Design and Intelligence — AI Library"
+          >
+            Design &<br />Intelligence
+          </p>
+        </div>
+
+        {/* Close button — mobile only */}
+        <button
+          onClick={onMobileClose}
+          className="lg:hidden flex items-center justify-center rounded-lg mt-1 flex-shrink-0"
+          aria-label="Close navigation"
+          style={{ width: 32, height: 32, background: 'none', border: 'none', cursor: 'pointer', color: 'var(--th-text-3)' }}
         >
-          AI Library
-        </p>
-        <p
-          className="text-xl leading-tight"
-          style={{ fontFamily: 'Instrument Serif, Georgia, serif', color: 'var(--th-text)', fontStyle: 'italic' }}
-          aria-label="Design and Intelligence — AI Library"
-        >
-          Design &<br />Intelligence
-        </p>
+          <X className="w-4 h-4" />
+        </button>
       </div>
 
       {/* Nav */}
@@ -70,6 +91,7 @@ export function Sidebar({
                     background: isActive ? isDark ? '#1A1815' : 'rgba(200,151,74,0.08)' : 'transparent',
                     borderLeft: isActive ? '2px solid #C8974A' : '2px solid transparent',
                     paddingLeft: isActive ? '6px' : '8px',
+                    minHeight: 44,
                   }}
                   onMouseEnter={(e) => {
                     if (!isActive) {
@@ -104,6 +126,7 @@ export function Sidebar({
                           style={{
                             color: isStageActive ? '#C8974A' : 'var(--th-text-3)',
                             background: isStageActive ? 'rgba(200,151,74,0.06)' : 'transparent',
+                            minHeight: 36,
                           }}
                           onMouseEnter={(e) => {
                             if (!isStageActive) {
@@ -153,6 +176,8 @@ export function Sidebar({
                   background: lang === l ? '#C8974A' : 'transparent',
                   color: lang === l ? '#0C0B09' : 'var(--th-text-3)',
                   letterSpacing: '0.04em',
+                  minHeight: 32,
+                  cursor: 'pointer',
                 }}
               >
                 {l === 'en' ? 'EN' : '中文'}
@@ -164,11 +189,14 @@ export function Sidebar({
           <button
             onClick={() => setTheme(isDark ? 'light' : 'dark')}
             aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-            className="flex items-center justify-center rounded-md p-1.5 transition-all"
+            className="flex items-center justify-center rounded-md transition-all"
             style={{
+              width: 36,
+              height: 36,
               background: isDark ? '#161412' : '#EEE9E3',
               border: `1px solid var(--th-border)`,
               color: 'var(--th-text-2)',
+              cursor: 'pointer',
             }}
             onMouseEnter={(e) => { e.currentTarget.style.color = '#C8974A' }}
             onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--th-text-2)' }}
@@ -193,8 +221,8 @@ export function Sidebar({
           href="https://designandintelligence.substack.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full block text-center text-xs font-medium py-1.5 rounded-md transition-colors"
-          style={{ background: '#C8974A', color: '#0C0B09', fontFamily: 'DM Sans', textDecoration: 'none' }}
+          className="w-full block text-center text-xs font-medium py-2 rounded-md transition-colors"
+          style={{ background: '#C8974A', color: '#0C0B09', fontFamily: 'DM Sans', textDecoration: 'none', minHeight: 36 }}
           onMouseEnter={(e) => { e.currentTarget.style.background = '#D4A55A' }}
           onMouseLeave={(e) => { e.currentTarget.style.background = '#C8974A' }}
         >

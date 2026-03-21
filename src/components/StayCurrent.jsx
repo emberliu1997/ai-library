@@ -163,7 +163,7 @@ export function PeopleIFollow() {
   const { t } = useLanguage()
 
   return (
-    <div className="px-8 pt-10 pb-20">
+    <div className="px-4 sm:px-8 pt-8 sm:pt-10 pb-20">
       {/* Page header */}
       <div className="mb-10">
         <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: '#C8974A', letterSpacing: '0.18em' }}>
