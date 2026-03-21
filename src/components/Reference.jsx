@@ -95,7 +95,7 @@ export function Reference({
 
       {/* ── Sticky filter bar ────────────────────────── */}
       <div
-        className="sticky top-[52px] lg:top-0 z-20 px-4 sm:px-8"
+        className="sticky top-0 z-20 px-4 sm:px-8"
         style={{
           background: 'var(--th-filter-bar)',
           borderBottom: '1px solid var(--th-border-sub)',

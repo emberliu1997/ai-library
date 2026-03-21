@@ -108,6 +108,20 @@
   ::selection { background: rgba(200, 151, 74, 0.25); color: #EDE5D8; }
 }
 
+/* ── Mobile bottom nav spacing ───────────────────────── */
+/* Adds padding so content isn't obscured by the 56px bottom nav + iOS home indicator */
+.mobile-content-pb {
+  padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
+}
+@media (min-width: 1024px) {
+  .mobile-content-pb {
+    padding-bottom: 0;
+  }
+}
+
+/* Hide scrollbar on filter pill rows */
+.overflow-x-auto::-webkit-scrollbar { display: none; }
+
 /* Grain overlay */
 .grain::after {
   content: '';

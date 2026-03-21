@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { Menu } from 'lucide-react'
 import { useLibrary } from './hooks/useLibrary'
 import { useTheme } from './context/ThemeContext'
-import { useLanguage } from './context/LanguageContext'
 import { Sidebar } from './components/Sidebar'
 import { StartHere } from './components/StartHere'
 import { GoDeeper } from './components/GoDeeper'
@@ -12,7 +11,6 @@ import { ThinkingDrawer } from './components/ThinkingDrawer'
 
 function App() {
   const { theme } = useTheme()
-  const { t } = useLanguage()
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
   const {
@@ -24,7 +22,6 @@ function App() {
     setActiveType,
     activeTags,
     toggleTag,
-    setActiveTags,
     activeTime,
     setActiveTime,
     searchQuery,
@@ -40,8 +37,8 @@ function App() {
     allItems,
   } = useLibrary()
 
-  function handleViewChange(v) {
-    setActiveView(v)
+  function handleViewChange(id) {
+    setActiveView(id)
     setMobileNavOpen(false)
   }
 
@@ -52,16 +49,19 @@ function App() {
     >
       <a href="#main-content" className="skip-link">Skip to main content</a>
 
-      {/* Mobile backdrop */}
+      {/* ── Mobile nav overlay backdrop ──────────────────── */}
       {mobileNavOpen && (
         <div
-          className="fixed inset-0 z-20 lg:hidden"
-          style={{ background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(4px)' }}
+          className="lg:hidden fixed inset-0 z-[35]"
+          style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}
           onClick={() => setMobileNavOpen(false)}
           aria-hidden="true"
         />
       )}
 
+      {/* ── Sidebar ─────────────────────────────────────────
+          Desktop: always visible, fixed left
+          Mobile:  hidden by default, slides in over content  */}
       <Sidebar
         activeView={activeView}
         onViewChange={handleViewChange}
@@ -72,44 +72,39 @@ function App() {
         onMobileClose={() => setMobileNavOpen(false)}
       />
 
-      {/* Mobile top bar */}
-      <header
-        className="lg:hidden fixed top-0 left-0 right-0 z-10 flex items-center justify-between px-4"
+      {/* ── Floating hamburger — mobile only ─────────────── */}
+      <button
+        className="lg:hidden fixed z-[34] flex items-center justify-center rounded-full transition-all"
+        onClick={() => setMobileNavOpen(true)}
+        aria-label="Open navigation"
+        aria-expanded={mobileNavOpen}
         style={{
-          height: 52,
-          background: 'var(--th-sidebar)',
-          borderBottom: '1px solid var(--th-sidebar-b)',
+          top: 16,
+          left: 16,
+          width: 40,
+          height: 40,
+          background: 'var(--th-surface)',
+          border: '1px solid var(--th-border)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          boxShadow: '0 2px 12px rgba(0,0,0,0.25)',
+          color: 'var(--th-text-2)',
+          cursor: 'pointer',
+          // Hide when nav is open (sidebar's X takes over)
+          opacity: mobileNavOpen ? 0 : 1,
+          pointerEvents: mobileNavOpen ? 'none' : 'auto',
+          transition: 'opacity 0.2s ease, box-shadow 0.2s ease',
         }}
-        aria-label="Mobile navigation bar"
       >
-        <button
-          onClick={() => setMobileNavOpen(true)}
-          aria-label="Open navigation menu"
-          className="flex items-center justify-center rounded-lg"
-          style={{ width: 44, height: 44, color: 'var(--th-text-2)', background: 'none', border: 'none', cursor: 'pointer' }}
-        >
-          <Menu className="w-5 h-5" />
-        </button>
+        <Menu className="w-4 h-4" />
+      </button>
 
-        <div className="text-center">
-          <p className="text-[10px] tracking-[0.18em] uppercase" style={{ color: '#C8974A', fontFamily: 'DM Sans' }}>
-            AI Library
-          </p>
-          <p
-            className="text-sm leading-tight"
-            style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-text)' }}
-          >
-            Design & Intelligence
-          </p>
-        </div>
-
-        {/* Spacer to balance hamburger */}
-        <div style={{ width: 44 }} aria-hidden="true" />
-      </header>
-
+      {/* ── Main content ─────────────────────────────────────
+          Mobile: full width, no offset — content is the focus
+          Desktop: offset by sidebar width                    */}
       <main
         id="main-content"
-        className="flex flex-col min-h-screen lg:ml-[240px] pt-[52px] lg:pt-0"
+        className="flex flex-col min-h-screen lg:ml-[240px] mobile-content-pb"
       >
         {activeView === 'start-here' && (
           <StartHere
