@@ -119,6 +119,14 @@
   }
 }
 
+/* Desktop sidebar: right border only; mobile drawer: left border only */
+@media (min-width: 1024px) {
+  aside[aria-label="Site navigation"] {
+    border-left: none !important;
+    border-right: 1px solid var(--th-sidebar-b) !important;
+  }
+}
+
 /* Hide scrollbar on filter pill rows */
 .overflow-x-auto::-webkit-scrollbar { display: none; }
 

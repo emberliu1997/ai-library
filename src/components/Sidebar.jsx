@@ -25,11 +25,11 @@ export function Sidebar({ activeView, onViewChange, activeStage, onStageChange, 
   return (
     <aside
       aria-label="Site navigation"
-      className={`flex flex-col fixed top-0 left-0 h-screen z-[36] overflow-hidden lg:translate-x-0 ${mobileOpen ? 'translate-x-0' : '-translate-x-full'} lg:!translate-x-0`}
+      className={`flex flex-col fixed top-0 right-0 h-screen z-[36] overflow-hidden lg:right-auto lg:left-0 lg:!translate-x-0 ${mobileOpen ? 'translate-x-0' : 'translate-x-full'}`}
       style={{
         width: 240,
         background: 'var(--th-sidebar)',
-        borderRight: '1px solid var(--th-sidebar-b)',
+        borderLeft: '1px solid var(--th-sidebar-b)',
         transition: 'transform 0.3s cubic-bezier(0.32, 0, 0.67, 0), background 0.25s ease',
       }}
     >
