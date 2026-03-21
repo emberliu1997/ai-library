@@ -80,7 +80,7 @@ function App() {
         aria-expanded={mobileNavOpen}
         style={{
           top: 16,
-          left: 16,
+          right: 16,
           width: 40,
           height: 40,
           background: 'var(--th-surface)',
