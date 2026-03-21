@@ -75,7 +75,7 @@ function SpotlightCard({ item, stagePick }) {
           alt=""
           aria-hidden="true"
           onError={(e) => { e.target.style.display = 'none' }}
-          className="absolute inset-0 w-full h-full object-cover transition-all duration-700 grayscale group-hover:grayscale-0"
+          className="absolute inset-0 w-full h-full object-cover transition-all duration-700 lg:grayscale lg:group-hover:grayscale-0"
           style={{ transform: 'scale(1.04)', transition: 'transform 0.7s ease, filter 0.7s ease' }}
           onMouseEnter={(e) => { e.target.style.transform = 'scale(1.0)' }}
           onMouseLeave={(e) => { e.target.style.transform = 'scale(1.04)' }}

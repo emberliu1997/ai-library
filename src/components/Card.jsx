@@ -60,7 +60,7 @@ export function Card({ item, isBookmarked, onBookmarkToggle, onSelect, index = 0
             alt=""
             aria-hidden="true"
             onError={(e) => { e.target.style.display = 'none' }}
-            className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-out"
+            className="absolute inset-0 w-full h-full object-cover lg:grayscale lg:group-hover:grayscale-0 transition-all duration-500 ease-out"
           />
         )}
         {item.type === 'book' && !coverUrl && (

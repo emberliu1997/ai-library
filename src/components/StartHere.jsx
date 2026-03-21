@@ -219,7 +219,7 @@ function TimelineCard({ item, index, isBookmarked, onBookmarkToggle, onSelectBoo
                     src={coverUrl || thumbnail}
                     alt={item.title}
                     onError={(e) => { e.target.style.display = 'none' }}
-                    className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="absolute inset-0 w-full h-full object-cover lg:grayscale lg:group-hover:grayscale-0 transition-all duration-700"
                     style={{ objectPosition: item.type === 'book' ? 'center top' : 'center center' }}
                   />
                   <div className="absolute inset-0 transition-opacity duration-300 group-hover:opacity-30" style={{ background: 'rgba(0,0,0,0.32)' }} />
