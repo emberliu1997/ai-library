@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-family-display: 'Instrument Serif', Georgia, serif;
+  --font-family-sans: 'DM Sans', system-ui, sans-serif;
+
+  /* Dark palette */
+  --color-bg:          #0C0B09;
+  --color-surface:     #111010;
+  --color-surface2:    #171614;
+  --color-border:      #1F1D1A;
+  --color-border2:     #2A2723;
+
+  /* Text — all values pass WCAG AA 4.5:1 against #0C0B09 */
+  --color-text:        #EDE5D8;   /* 15.8:1 */
+  --color-text-2:      #96928D;   /*  6.4:1 — replaces #5C5550 / #7A7268 */
+  --color-text-3:      #817D78;   /*  4.8:1 — replaces #3D3A35 */
+
+  /* Amber accent */
+  --color-amber:       #C8974A;
+  --color-amber-dim:   rgba(200, 151, 74, 0.08);
+  --color-amber-glow:  rgba(200, 151, 74, 0.18);
+
+  /* Drawer navy */
+  --color-navy:        #0D1424;
+}
+
+/* ── Theme CSS Variables ─────────────────────────────── */
+:root {
+  --th-bg:           #0C0B09;
+  --th-surface:      #111010;
+  --th-surface2:     #171614;
+  --th-elevated:     #0E0D0B;
+  --th-border:       #1F1D1A;
+  --th-border-sub:   #1A1815;
+  --th-text:         #EDE5D8;
+  --th-text-2:       #96928D;
+  --th-text-3:       #817D78;
+  --th-sidebar:      #0C0B09;
+  --th-sidebar-b:    #1F1D1A;
+  --th-filter-bar:   rgba(12,11,9,0.92);
+  --th-hover:        #141210;
+}
+
+.theme-light {
+  --th-bg:           #F4F1EC;
+  --th-surface:      #FFFFFF;
+  --th-surface2:     #F9F7F4;
+  --th-elevated:     #FFFFFF;
+  --th-border:       #DDD8D0;
+  --th-border-sub:   #EAE5DF;
+  --th-text:         #1A1714;
+  --th-text-2:       #5C5550;
+  --th-text-3:       #7A7268;
+  --th-sidebar:      #FFFFFF;
+  --th-sidebar-b:    #DDD8D0;
+  --th-filter-bar:   rgba(244,241,236,0.95);
+  --th-hover:        rgba(0,0,0,0.05);
+}
+
+@layer base {
+  html { color-scheme: dark; }
+  .theme-light { color-scheme: light; }
+
+  body {
+    background-color: var(--th-bg);
+    color: var(--th-text);
+    font-family: 'DM Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  * { box-sizing: border-box; }
+  #root { width: 100%; text-align: left; }
+
+  /* Skip navigation link — visually hidden until focused */
+  .skip-link {
+    position: absolute;
+    top: -999px;
+    left: 8px;
+    z-index: 9999;
+    padding: 8px 16px;
+    background: #C8974A;
+    color: #0C0B09;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+  }
+  .skip-link:focus { top: 8px; }
+
+  /* Visible focus ring for keyboard navigation */
+  :focus-visible {
+    outline: 2px solid #C8974A;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 4px; height: 4px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #2A2723; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: #3D3A35; }
+
+  /* Selection */
+  ::selection { background: rgba(200, 151, 74, 0.25); color: #EDE5D8; }
+}
+
+/* Grain overlay */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
