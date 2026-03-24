@@ -151,7 +151,12 @@ export function GoDeeper({
           {t('go_deeper_label')}
         </p>
         <h1 className="text-4xl leading-tight mb-2" style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-text)' }}>
-          {activeStage ? t(`stage_${activeStage.replace(/\s+/g, '_')}`) : t('go_deeper_h1_all')}
+          {activeStage ? (
+            <>
+              <span style={{ color: 'var(--th-border-sub)' }}>{STAGE_META[activeStage].number}.</span>
+              {' '}{t(`stage_${activeStage.replace(/\s+/g, '_')}`)}
+            </>
+          ) : t('go_deeper_h1_all')}
         </h1>
         {!activeStage && (
           <p className="text-sm max-w-lg" style={{ color: 'var(--th-text-2)', lineHeight: 1.7 }}>
