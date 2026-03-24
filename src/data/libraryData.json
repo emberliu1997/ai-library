@@ -985,5 +985,20 @@
     "timeCommitment": "3hr+",
     "title_cn": "赦免",
     "implication_cn": "总统特赦的政治博弈。"
+  },
+  {
+    "type": "article",
+    "title": "How can I think 'AI-Natively'?",
+    "creator": "Yuzheng Sun",
+    "show": "LinkedIn",
+    "stage": "Literacy",
+    "implication": "AI-native thinking is a repricing of what expertise is worth.",
+    "url": "https://www.linkedin.com/pulse/what-does-ai-native-mindset-mean-yuzheng-sun-zjsyf/",
+    "tags": [
+      "Mental Models"
+    ],
+    "timeCommitment": "15min",
+    "title_cn": "AI 原生思维是什么意思？",
+    "implication_cn": "AI 原生思维不是新的技术栈——而是对专业知识价值的重新定价。"
   }
 ]
