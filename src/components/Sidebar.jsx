@@ -144,7 +144,7 @@ export function Sidebar({ activeView, onViewChange, activeStage, onStageChange, 
                             }
                           }}
                         >
-                          <span>{stage}</span>
+                          <span>{t(`stage_${stage.replace(/\s+/g, '_')}`)}</span>
                           <span className="text-xs tabular-nums" style={{ color: 'var(--th-text-3)' }}>
                             {stageCount(stage)}
                           </span>

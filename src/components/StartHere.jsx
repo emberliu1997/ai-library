@@ -254,18 +254,36 @@ function TimelineCard({ item, index, onSelectBook, isLast, isExplored, onExplore
                   </div>
                 </div>
               ) : (
-                <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid var(--th-border-sub)' }}>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs font-medium uppercase tracking-widest" style={{ color: meta.color, letterSpacing: '0.13em' }}>
-                      {meta.label}
-                    </span>
-                    {item.timeCommitment && (
-                      <span className="text-xs px-1.5 py-0.5 rounded" style={{ color: 'var(--th-text-3)', background: 'var(--th-surface2)' }}>
-                        {TIME_LABELS[item.timeCommitment]}
-                      </span>
-                    )}
+                /* Rich text-based banner for articles/websites */
+                <div
+                  className="relative overflow-hidden"
+                  style={{ aspectRatio: '16/9', background: 'linear-gradient(135deg, #0D0E18 0%, #1A1208 50%, #0E0A04 100%)' }}
+                >
+                  {/* Decorative grain texture */}
+                  <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 20% 50%, rgba(200,151,74,0.12) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(200,151,74,0.07) 0%, transparent 50%)' }} />
+                  {/* Large decorative quote mark */}
+                  <div className="absolute" style={{ right: 24, top: 12, fontSize: 120, lineHeight: 1, fontFamily: 'Instrument Serif, Georgia, serif', color: 'rgba(200,151,74,0.06)', pointerEvents: 'none', userSelect: 'none' }}>"</div>
+                  {/* Content */}
+                  <div className="absolute inset-0 flex flex-col justify-between p-5">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-medium uppercase tracking-widest" style={{ color: meta.color, letterSpacing: '0.15em' }}>{meta.label}</span>
+                      {item.timeCommitment && (
+                        <span className="text-xs px-1.5 py-0.5 rounded" style={{ color: 'rgba(200,151,74,0.6)', background: 'rgba(200,151,74,0.08)', border: '1px solid rgba(200,151,74,0.15)' }}>
+                          {TIME_LABELS[item.timeCommitment] || item.timeCommitment}
+                        </span>
+                      )}
+                    </div>
+                    <div>
+                      <p className="leading-snug mb-2 line-clamp-3" style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', fontSize: 20, color: '#EDE5D8', maxWidth: 340 }}>
+                        {displayTitle}
+                      </p>
+                      <p className="text-xs" style={{ color: 'rgba(200,151,74,0.6)' }}>
+                        {item.creator || item.author}
+                        {item.show && <span style={{ color: 'rgba(200,151,74,0.35)' }}> · {item.show}</span>}
+                      </p>
+                    </div>
                   </div>
-                  <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: 'var(--th-text-2)' }} />
+                  <ExternalLink className="absolute top-4 right-4 w-3.5 h-3.5 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: 'rgba(200,151,74,0.6)' }} />
                 </div>
               )}
 

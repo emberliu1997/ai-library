@@ -261,7 +261,8 @@
     "startHere": true,
     "startHereReason": "Shortcut to 1,500 papers on what prompting techniques actually work.",
     "title_cn": "2025 年 AI 提示词工程（Sander Schulhoff）",
-    "implication_cn": "综合 1500 多篇论文，告诉你哪些提示技巧真正有效。"
+    "implication_cn": "综合 1500 多篇论文，告诉你哪些提示技巧真正有效。",
+    "startHereReason_cn": "直达 1500 篇论文的捷径——了解哪些提示技巧真正奏效。"
   },
   {
     "type": "video",
@@ -373,7 +374,8 @@
     "startHereReason": "AI's magic lives in small moments — this gives you the framework to design them.",
     "title_cn": "微交互",
     "implication_cn": "设计那些创造魔力的小时刻。",
-    "deepThinkingBridge_cn": "AI 输出通常是非即时的——它有延迟、有不确定性。Saffer 关于反馈与状态的研究，直接适用于设计 AI 处理时的加载态、错误态和成功态。"
+    "deepThinkingBridge_cn": "AI 输出通常是非即时的——它有延迟、有不确定性。Saffer 关于反馈与状态的研究，直接适用于设计 AI 处理时的加载态、错误态和成功态。",
+    "startHereReason_cn": "AI 的魔力藏在小细节里——这本书给你设计这些时刻的框架。"
   },
   {
     "type": "book",
@@ -519,7 +521,8 @@
     "startHere": true,
     "startHereReason": "The shift from 'feels right' to 'here's how we measure it.'",
     "title_cn": "为什么 AI 评估是最热门的新技能",
-    "implication_cn": "如何从「感觉对了」到「这是我们的衡量方式」。"
+    "implication_cn": "如何从「感觉对了」到「这是我们的衡量方式」。",
+    "startHereReason_cn": "从「感觉对了」到「这是我们的衡量方式」的转变。"
   },
   {
     "type": "podcast",

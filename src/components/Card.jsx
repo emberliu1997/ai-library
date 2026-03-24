@@ -39,7 +39,7 @@ const ASPECT = {
 }
 
 export function Card({ item, isBookmarked, onBookmarkToggle, onSelect, index = 0 }) {
-  const { lang } = useLanguage()
+  const { lang, t } = useLanguage()
   const isCN = lang === 'cn'
   const cfg = TYPE_CONFIG[item.type] || TYPE_CONFIG.article
   const bookmarked = isBookmarked(item.title)
@@ -177,10 +177,10 @@ export function Card({ item, isBookmarked, onBookmarkToggle, onSelect, index = 0
               className="text-xs font-bold uppercase tracking-widest mb-1"
               style={{ color: '#C8974A', letterSpacing: '0.15em' }}
             >
-              Why
+              {t('why_this_one')}
             </p>
             <p className="text-xs leading-relaxed line-clamp-3" style={{ color: '#96928D' }}>
-              {item.startHereReason}
+              {isCN ? (item.startHereReason_cn || item.startHereReason) : item.startHereReason}
             </p>
           </div>
         )}
