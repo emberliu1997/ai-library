@@ -86,7 +86,7 @@ export function ThinkingDrawer({ item, onClose }) {
             {/* ── Hero: title left + cover right ── */}
             <div
               className="relative overflow-hidden"
-              style={{ minHeight: 220, padding: '32px 28px 36px' }}
+              style={{ minHeight: 280, padding: '36px 28px 44px' }}
             >
               {/* Ambient blurred cover as background */}
               {coverUrl && (
@@ -144,17 +144,17 @@ export function ThinkingDrawer({ item, onClose }) {
 
                 {/* Right: book cover */}
                 {coverUrl && (
-                  <div className="flex-shrink-0" style={{ marginBottom: -8 }}>
+                  <div className="flex-shrink-0" style={{ marginBottom: -16 }}>
                     <img
                       src={coverUrl}
                       alt={item.title}
                       onError={(e) => { e.target.parentElement.style.display = 'none' }}
                       style={{
-                        height: 148,
+                        height: 200,
                         width: 'auto',
-                        borderRadius: 5,
+                        borderRadius: 6,
                         transform: 'rotate(2deg)',
-                        boxShadow: '0 16px 40px rgba(0,0,0,0.75), 0 4px 12px rgba(0,0,0,0.5), inset 0 0 0 1px rgba(255,255,255,0.07)',
+                        boxShadow: '0 24px 56px rgba(0,0,0,0.8), 0 8px 20px rgba(0,0,0,0.55), inset 0 0 0 1px rgba(255,255,255,0.07)',
                         transformOrigin: 'bottom right',
                       }}
                     />
