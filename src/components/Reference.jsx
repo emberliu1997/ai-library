@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Search, X, LayoutGrid, List } from 'lucide-react'
+import { useState, useEffect, useRef } from 'react'
+import { Search, X, LayoutGrid, List, SlidersHorizontal } from 'lucide-react'
 import { TypeSections } from './TypeSections'
 import { useLanguage } from '../context/LanguageContext'
 
@@ -79,8 +79,21 @@ export function Reference({
   onSelectBook,
 }) {
   const [viewMode, setViewMode] = useState('grid')
+  const [filtersOpen, setFiltersOpen] = useState(true)
+  const [scrolled, setScrolled] = useState(false)
   const { t } = useLanguage()
   const hasFilters = activeStage || activeType || activeTags.length > 0 || activeTime || searchQuery
+  const activeFilterCount = [activeStage, activeType, activeTime, ...activeTags].filter(Boolean).length
+
+  useEffect(() => {
+    const onScroll = () => {
+      const isScrolled = window.scrollY > 80
+      setScrolled(isScrolled)
+      if (isScrolled) setFiltersOpen(false)
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   function clearAll() {
     onStageChange(null)
@@ -104,16 +117,12 @@ export function Reference({
         }}
       >
 
-        {/* Top row: search + count + view toggle */}
-        <div className="flex items-center gap-3 py-3.5">
+        {/* Top row: search + count + filters toggle + view toggle */}
+        <div className="flex items-center gap-3 py-2.5">
 
           {/* Search */}
           <div className="relative flex-1 max-w-sm">
-            <Search
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5"
-              style={{ color: 'var(--th-text-3)' }}
-              aria-hidden="true"
-            />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5" style={{ color: 'var(--th-text-3)' }} aria-hidden="true" />
             <label htmlFor="reference-search" className="sr-only">Search resources</label>
             <input
               id="reference-search"
@@ -121,52 +130,47 @@ export function Reference({
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
               placeholder={t('search_placeholder')}
-              className="w-full pl-9 pr-7 py-2 rounded-lg outline-none"
-              style={{
-                fontSize: 16, /* Prevent iOS auto-zoom on focus */
-                background: 'var(--th-surface)',
-                border: '1px solid var(--th-border)',
-                color: 'var(--th-text)',
-                fontFamily: 'DM Sans',
-              }}
+              className="w-full pl-9 pr-7 py-1.5 rounded-lg outline-none"
+              style={{ fontSize: 16, background: 'var(--th-surface)', border: '1px solid var(--th-border)', color: 'var(--th-text)', fontFamily: 'DM Sans' }}
               onFocus={(e) => { e.target.style.borderColor = 'rgba(200,151,74,0.5)' }}
               onBlur={(e) => { e.target.style.borderColor = 'var(--th-border)' }}
             />
             {searchQuery && (
-              <button
-                onClick={() => onSearchChange('')}
-                className="absolute right-2.5 top-1/2 -translate-y-1/2"
-                aria-label="Clear search"
-              >
+              <button onClick={() => onSearchChange('')} className="absolute right-2.5 top-1/2 -translate-y-1/2" aria-label="Clear search">
                 <X className="w-3.5 h-3.5" style={{ color: 'var(--th-text-3)' }} />
               </button>
             )}
           </div>
 
-          {/* Item count */}
-          <span
-            className="tabular-nums flex-shrink-0"
-            style={{ fontSize: 13, color: 'var(--th-text-3)' }}
-            aria-live="polite"
-            aria-atomic="true"
+          {/* Filters toggle button */}
+          <button
+            onClick={() => setFiltersOpen(v => !v)}
+            className="flex items-center gap-1.5 flex-shrink-0 transition-all"
+            style={{
+              fontSize: 12, fontWeight: 500, padding: '5px 11px', borderRadius: 8, cursor: 'pointer',
+              background: filtersOpen ? 'rgba(200,151,74,0.1)' : 'var(--th-surface)',
+              border: filtersOpen ? '1px solid rgba(200,151,74,0.3)' : '1px solid var(--th-border)',
+              color: filtersOpen ? '#C8974A' : 'var(--th-text-2)',
+            }}
           >
+            <SlidersHorizontal className="w-3 h-3" />
+            <span className="hidden sm:inline">Filters</span>
+            {activeFilterCount > 0 && (
+              <span style={{ background: '#C8974A', color: '#0C0B09', borderRadius: 99, padding: '0 5px', fontSize: 10, fontWeight: 700 }}>
+                {activeFilterCount}
+              </span>
+            )}
+          </button>
+
+          {/* Item count */}
+          <span className="tabular-nums flex-shrink-0 hidden sm:block" style={{ fontSize: 13, color: 'var(--th-text-3)' }} aria-live="polite">
             {items.length} {items.length === 1 ? t('items_count_one') : t('items_count_many')}
           </span>
 
           {/* Clear all */}
           {hasFilters && (
-            <button
-              onClick={clearAll}
-              className="flex-shrink-0 transition-colors"
-              style={{
-                fontSize: 12,
-                padding: '4px 10px',
-                borderRadius: 8,
-                color: 'var(--th-text-3)',
-                background: 'var(--th-surface)',
-                border: '1px solid var(--th-border)',
-                cursor: 'pointer',
-              }}
+            <button onClick={clearAll} className="flex-shrink-0 transition-colors hidden sm:block"
+              style={{ fontSize: 12, padding: '4px 10px', borderRadius: 8, color: 'var(--th-text-3)', background: 'var(--th-surface)', border: '1px solid var(--th-border)', cursor: 'pointer' }}
               onMouseEnter={(e) => { e.currentTarget.style.color = '#C8974A' }}
               onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--th-text-3)' }}
             >
@@ -174,105 +178,58 @@ export function Reference({
             </button>
           )}
 
-          {/* View toggle — prominent segmented control */}
-          <div
-            className="ml-auto flex-shrink-0 flex rounded-xl overflow-hidden"
-            style={{ border: '1px solid var(--th-border)' }}
-            role="group"
-            aria-label="View mode"
-          >
-            <button
-              onClick={() => setViewMode('grid')}
-              aria-label="Grid view"
-              aria-pressed={viewMode === 'grid'}
+          {/* View toggle */}
+          <div className="ml-auto flex-shrink-0 flex rounded-xl overflow-hidden" style={{ border: '1px solid var(--th-border)' }} role="group" aria-label="View mode">
+            <button onClick={() => setViewMode('grid')} aria-label="Grid view" aria-pressed={viewMode === 'grid'}
               className="flex items-center gap-1.5 transition-all"
-              style={{
-                padding: '7px 14px',
-                fontSize: 12,
-                fontWeight: 500,
-                background: viewMode === 'grid' ? '#C8974A' : 'var(--th-surface2)',
-                color: viewMode === 'grid' ? '#0C0B09' : 'var(--th-text-3)',
-                cursor: 'pointer',
-              }}
-            >
+              style={{ padding: '6px 12px', fontSize: 12, fontWeight: 500, background: viewMode === 'grid' ? '#C8974A' : 'var(--th-surface2)', color: viewMode === 'grid' ? '#0C0B09' : 'var(--th-text-3)', cursor: 'pointer' }}>
               <LayoutGrid className="w-3.5 h-3.5" />
-              <span>{t('view_grid')}</span>
+              <span className="hidden sm:inline">{t('view_grid')}</span>
             </button>
             <div style={{ width: 1, background: 'var(--th-border)' }} />
-            <button
-              onClick={() => setViewMode('list')}
-              aria-label="List view"
-              aria-pressed={viewMode === 'list'}
+            <button onClick={() => setViewMode('list')} aria-label="List view" aria-pressed={viewMode === 'list'}
               className="flex items-center gap-1.5 transition-all"
-              style={{
-                padding: '7px 14px',
-                fontSize: 12,
-                fontWeight: 500,
-                background: viewMode === 'list' ? '#C8974A' : 'var(--th-surface2)',
-                color: viewMode === 'list' ? '#0C0B09' : 'var(--th-text-3)',
-                cursor: 'pointer',
-              }}
-            >
+              style={{ padding: '6px 12px', fontSize: 12, fontWeight: 500, background: viewMode === 'list' ? '#C8974A' : 'var(--th-surface2)', color: viewMode === 'list' ? '#0C0B09' : 'var(--th-text-3)', cursor: 'pointer' }}>
               <List className="w-3.5 h-3.5" />
-              <span>{t('view_list')}</span>
+              <span className="hidden sm:inline">{t('view_list')}</span>
             </button>
           </div>
         </div>
 
-        {/* Divider between top row and filters */}
-        <div style={{ height: 1, background: 'var(--th-border-sub)' }} />
-
-        {/* Filter rows */}
-        <div className="flex flex-col gap-2.5 py-3">
-          <FilterRow label={t('filter_stage')}>
-            {STAGES.map((s) => (
-              <Pill
-                key={s}
-                label={t(`stage_${s.replace(/\s+/g, '_')}`)}
-                isActive={activeStage === s}
-                onClick={() => onStageChange(activeStage === s ? null : s)}
-              />
-            ))}
-          </FilterRow>
-
-          <FilterRow label={t('filter_format')}>
-            {TYPES.map((v) => {
-              const keyMap = { book: 'format_book', video: 'format_video', podcast: 'format_podcast', article: 'format_article', website: 'format_site' }
-              return (
-                <Pill
-                  key={v}
-                  label={t(keyMap[v])}
-                  isActive={activeType === v}
-                  onClick={() => onTypeChange(activeType === v ? null : v)}
-                />
-              )
-            })}
-          </FilterRow>
-
-          <FilterRow label={t('filter_time')}>
-            {TIMES.map((v) => {
-              const keyMap = { '15min': 'time_15min', '1hr': 'time_1hr', '3hr+': 'time_3hr' }
-              return (
-                <Pill
-                  key={v}
-                  label={t(keyMap[v])}
-                  isActive={activeTime === v}
-                  onClick={() => onTimeChange(activeTime === v ? null : v)}
-                />
-              )
-            })}
-          </FilterRow>
-
-          <FilterRow label={t('filter_topic')}>
-            {TAGS.map((tag) => (
-              <Pill
-                key={tag}
-                label={tag}
-                isActive={activeTags.includes(tag)}
-                onClick={() => onTagToggle(tag)}
-              />
-            ))}
-          </FilterRow>
+        {/* Collapsible filter rows */}
+        <div
+          style={{
+            overflow: 'hidden',
+            maxHeight: filtersOpen ? 300 : 0,
+            opacity: filtersOpen ? 1 : 0,
+            transition: 'max-height 0.25s ease, opacity 0.2s ease',
+          }}
+        >
+          <div style={{ height: 1, background: 'var(--th-border-sub)' }} />
+          <div className="flex flex-col gap-2 py-2.5">
+            <FilterRow label={t('filter_stage')}>
+              {STAGES.map((s) => (
+                <Pill key={s} label={t(`stage_${s.replace(/\s+/g, '_')}`)} isActive={activeStage === s} onClick={() => onStageChange(activeStage === s ? null : s)} />
+              ))}
+            </FilterRow>
+            <FilterRow label={t('filter_format')}>
+              {TYPES.map((v) => {
+                const keyMap = { book: 'format_book', video: 'format_video', podcast: 'format_podcast', article: 'format_article', website: 'format_site' }
+                return <Pill key={v} label={t(keyMap[v])} isActive={activeType === v} onClick={() => onTypeChange(activeType === v ? null : v)} />
+              })}
+            </FilterRow>
+            <FilterRow label={t('filter_time')}>
+              {TIMES.map((v) => {
+                const keyMap = { '15min': 'time_15min', '1hr': 'time_1hr', '3hr+': 'time_3hr' }
+                return <Pill key={v} label={t(keyMap[v])} isActive={activeTime === v} onClick={() => onTimeChange(activeTime === v ? null : v)} />
+              })}
+            </FilterRow>
+            <FilterRow label={t('filter_topic')}>
+              {TAGS.map((tag) => (
+                <Pill key={tag} label={tag} isActive={activeTags.includes(tag)} onClick={() => onTagToggle(tag)} />
+              ))}
+            </FilterRow>
+          </div>
         </div>
       </div>
 
