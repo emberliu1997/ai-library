@@ -24,6 +24,7 @@ const NEWSLETTERS = [
   { name: 'Latent Space', url: 'https://www.latent.space', annotation: "Technical but accessible. Covers what's actually happening at the AI frontier.", annotation_cn: '技术深度与可读性兼具。追踪 AI 前沿真正发生的事。', cadence: 'Weekly' },
   { name: 'Every', url: 'https://every.to/', annotation: 'A bundle of newsletters on AI, business, and the future of work by independent writers.', annotation_cn: '由独立作者撰写的 AI、商业与未来工作主题精选通讯合集。', cadence: 'Daily' },
   { name: 'The AI Valley', url: 'https://www.theaivalley.com/', annotation: 'Curated AI news and tools for builders and curious minds.', annotation_cn: '为构建者和好奇心旺盛的人精选的 AI 新闻与工具。', cadence: 'Daily' },
+  { name: 'The Looking Glass', url: 'https://lg.substack.com/', annotation: 'Julie Zhuo on leadership, design, and building — the most thoughtful writing on what it means to do great work.', annotation_cn: 'Julie Zhuo 关于领导力、设计与创造的思考——关于如何做出卓越工作，最有深度的写作。', cadence: 'Weekly' },
 ]
 
 const SHOWS = [
