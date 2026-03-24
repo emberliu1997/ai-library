@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Sun, Moon, X } from 'lucide-react'
 import { useTheme } from '../context/ThemeContext'
 import { useLanguage } from '../context/LanguageContext'
@@ -21,8 +22,10 @@ export function Sidebar({ activeView, onViewChange, activeStage, onStageChange, 
   const { lang, setLang, t } = useLanguage()
   const isDark = theme === 'dark'
   const stageCount = (stage) => allItems.filter((i) => i.stage === stage).length
+  const [subscribeOpen, setSubscribeOpen] = useState(false)
 
   return (
+    <>
     <aside
       aria-label="Site navigation"
       className={`flex flex-col fixed top-0 right-0 h-screen z-[36] overflow-hidden lg:right-auto lg:left-0 lg:!translate-x-0 ${mobileOpen ? 'translate-x-0' : 'translate-x-full'}`}
@@ -219,18 +222,77 @@ export function Sidebar({ activeView, onViewChange, activeStage, onStageChange, 
         <p className="text-xs mb-3" style={{ color: 'var(--th-text-3)' }}>
           {t('subscribe_teaser')}
         </p>
-        <a
-          href="https://emberliu.substack.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full block text-center text-xs font-medium py-2 rounded-md transition-colors"
-          style={{ background: '#C8974A', color: '#0C0B09', fontFamily: 'DM Sans', textDecoration: 'none' }}
+        <button
+          onClick={() => setSubscribeOpen(true)}
+          className="w-full text-center text-xs font-medium py-2 rounded-md transition-colors"
+          style={{ background: '#C8974A', color: '#0C0B09', fontFamily: 'DM Sans', border: 'none', cursor: 'pointer' }}
           onMouseEnter={(e) => { e.currentTarget.style.background = '#D4A55A' }}
           onMouseLeave={(e) => { e.currentTarget.style.background = '#C8974A' }}
         >
           {t('subscribe_cta')}
-        </a>
+        </button>
       </div>
     </aside>
+
+      {/* Subscribe modal */}
+      {subscribeOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            onClick={() => setSubscribeOpen(false)}
+            style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.65)', backdropFilter: 'blur(4px)', zIndex: 200 }}
+            aria-hidden="true"
+          />
+          {/* Modal */}
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Subscribe to newsletter"
+            style={{
+              position: 'fixed', top: '50%', left: '50%',
+              transform: 'translate(-50%, -50%)',
+              zIndex: 201, width: 'calc(100vw - 32px)', maxWidth: 500,
+              borderRadius: 16, overflow: 'hidden',
+              boxShadow: '0 32px 80px rgba(0,0,0,0.7)',
+            }}
+          >
+            {/* Modal header */}
+            <div
+              className="flex items-center justify-between px-5 py-4"
+              style={{ background: '#0E0D0B', borderBottom: '1px solid #1A1815' }}
+            >
+              <div>
+                <p className="text-sm font-medium" style={{ color: '#EDE5D8', fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic' }}>
+                  {t('stay_sharp')}
+                </p>
+                <p className="text-xs mt-0.5" style={{ color: 'var(--th-text-3)' }}>
+                  {t('subscribe_teaser')}
+                </p>
+              </div>
+              <button
+                onClick={() => setSubscribeOpen(false)}
+                aria-label="Close"
+                className="flex items-center justify-center rounded-full transition-colors"
+                style={{ width: 32, height: 32, background: '#1A1815', border: 'none', cursor: 'pointer', flexShrink: 0 }}
+                onMouseEnter={(e) => { e.currentTarget.style.background = '#252220' }}
+                onMouseLeave={(e) => { e.currentTarget.style.background = '#1A1815' }}
+              >
+                <X className="w-4 h-4" style={{ color: '#96928D' }} />
+              </button>
+            </div>
+            {/* Substack embed */}
+            <iframe
+              src="https://emberliu.substack.com/embed"
+              width="100%"
+              height="280"
+              style={{ display: 'block', border: 'none' }}
+              frameBorder="0"
+              scrolling="no"
+              title="Subscribe to Ember Liu's newsletter"
+            />
+          </div>
+        </>
+      )}
+    </>
   )
 }
