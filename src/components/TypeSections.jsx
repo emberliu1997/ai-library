@@ -4,14 +4,15 @@ import { MasonryGrid } from './MasonryGrid'
 import { ExternalLink } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 
-const TYPE_ORDER = ['video', 'podcast', 'website', 'article', 'book']
+const TYPE_ORDER = ['video', 'podcast', 'book', 'website', 'article', 'newsletter']
 
 const TYPE_LABEL_KEYS = {
-  video:   'type_videos',
-  podcast: 'type_podcasts',
-  website: 'type_websites',
-  article: 'type_articles',
-  book:    'type_books',
+  video:      'type_videos',
+  podcast:    'type_podcasts',
+  book:       'type_books',
+  website:    'type_websites',
+  article:    'type_articles',
+  newsletter: 'type_newsletters',
 }
 
 const BOOK_PALETTES = [

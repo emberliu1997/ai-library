@@ -23,19 +23,21 @@ function extractVideoId(url) {
 }
 
 const TYPE_CONFIG = {
-  book:    { label: 'Book',    Icon: null,       isLink: true  },
-  video:   { label: 'Video',   Icon: Play,       isLink: true  },
-  podcast: { label: 'Podcast', Icon: Headphones, isLink: true  },
-  article: { label: 'Article', Icon: FileText,   isLink: true  },
-  website: { label: 'Site',    Icon: Globe,      isLink: true  },
+  book:       { label: 'Book',       Icon: null,       isLink: true  },
+  video:      { label: 'Video',      Icon: Play,       isLink: true  },
+  podcast:    { label: 'Podcast',    Icon: Headphones, isLink: true  },
+  article:    { label: 'Article',    Icon: FileText,   isLink: true  },
+  website:    { label: 'Site',       Icon: Globe,      isLink: true  },
+  newsletter: { label: 'Newsletter', Icon: FileText,   isLink: true  },
 }
 
 const ASPECT = {
-  book:    '3/4',
-  video:   '16/9',
-  podcast: '16/9',
-  article: null,
-  website: null,
+  book:       '3/4',
+  video:      '16/9',
+  podcast:    '16/9',
+  article:    null,
+  website:    null,
+  newsletter: null,
 }
 
 export function Card({ item, onSelect, index = 0 }) {

@@ -159,7 +159,7 @@ export function GoDeeper({
           ) : t('go_deeper_h1_all')}
         </h1>
         {!activeStage && (
-          <p className="text-sm max-w-lg" style={{ color: 'var(--th-text-2)', lineHeight: 1.7 }}>
+          <p className="text-base max-w-lg" style={{ color: 'var(--th-text-2)', lineHeight: 1.7 }}>
             {t('go_deeper_desc')}
           </p>
         )}
@@ -218,7 +218,7 @@ export function GoDeeper({
                     {meta.number} / 04
                   </p>
                 )}
-                <p className="text-sm max-w-xl" style={{ color: 'var(--th-text-2)', lineHeight: 1.75 }}>
+                <p className="text-base max-w-xl" style={{ color: 'var(--th-text-2)', lineHeight: 1.75 }}>
                   {t(framingKey)}
                 </p>
               </div>

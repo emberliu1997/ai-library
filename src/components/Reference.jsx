@@ -4,7 +4,7 @@ import { TypeSections } from './TypeSections'
 import { useLanguage } from '../context/LanguageContext'
 
 const STAGES = ['Literacy', 'Craft', 'Judgment', 'Systems Thinking']
-const TYPES  = ['book', 'video', 'podcast', 'article', 'website']
+const TYPES  = ['video', 'podcast', 'book', 'website', 'article', 'newsletter']
 const TIMES  = ['15min', '1hr', '3hr+']
 const TAGS   = ['Agents', 'Evals', 'Prompt Design', 'Responsible AI', 'Design Patterns', 'Mental Models', 'Strategy']
 
@@ -214,7 +214,7 @@ export function Reference({
             </FilterRow>
             <FilterRow label={t('filter_format')}>
               {TYPES.map((v) => {
-                const keyMap = { book: 'format_book', video: 'format_video', podcast: 'format_podcast', article: 'format_article', website: 'format_site' }
+                const keyMap = { book: 'format_book', video: 'format_video', podcast: 'format_podcast', article: 'format_article', website: 'format_site', newsletter: 'format_newsletter' }
                 return <Pill key={v} label={t(keyMap[v])} isActive={activeType === v} onClick={() => onTypeChange(activeType === v ? null : v)} />
               })}
             </FilterRow>

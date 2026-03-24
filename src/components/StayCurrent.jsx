@@ -185,7 +185,7 @@ export function PeopleIFollow() {
         >
           {t('people_h1a')}<br />{t('people_h1b')}
         </h1>
-        <p className="text-sm max-w-lg" style={{ color: 'var(--th-text-2)', lineHeight: 1.7 }}>
+        <p className="text-base max-w-lg" style={{ color: 'var(--th-text-2)', lineHeight: 1.7 }}>
           {t('people_desc')}
         </p>
         <div className="mt-5 h-px" style={{ background: 'linear-gradient(90deg, #C8974A22, transparent)' }} />

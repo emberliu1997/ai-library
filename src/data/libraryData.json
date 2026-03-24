@@ -1002,7 +1002,7 @@
     "implication_cn": "AI 原生思维不是新的技术栈——而是对专业知识价值的重新定价。"
   },
   {
-    "type": "article",
+    "type": "newsletter",
     "title": "Simon Willison's Weblog",
     "creator": "Simon Willison",
     "show": "Newsletter",
@@ -1018,7 +1018,7 @@
     "timeCommitment": "15min"
   },
   {
-    "type": "article",
+    "type": "newsletter",
     "title": "Lenny's Newsletter",
     "creator": "Lenny Rachitsky",
     "show": "Newsletter",
@@ -1034,7 +1034,7 @@
     "timeCommitment": "1hr"
   },
   {
-    "type": "article",
+    "type": "newsletter",
     "title": "TLDR AI",
     "creator": "TLDR Media",
     "show": "Newsletter",
@@ -1047,7 +1047,7 @@
     "timeCommitment": "15min"
   },
   {
-    "type": "article",
+    "type": "newsletter",
     "title": "Interconnects",
     "creator": "Nathan Lambert",
     "show": "Newsletter",
@@ -1062,7 +1062,7 @@
     "timeCommitment": "1hr"
   },
   {
-    "type": "article",
+    "type": "newsletter",
     "title": "Latent Space",
     "creator": "swyx & Alessio",
     "show": "Newsletter",
@@ -1078,7 +1078,7 @@
     "timeCommitment": "1hr"
   },
   {
-    "type": "article",
+    "type": "newsletter",
     "title": "Every",
     "creator": "Every",
     "show": "Newsletter",
@@ -1094,7 +1094,7 @@
     "timeCommitment": "1hr"
   },
   {
-    "type": "article",
+    "type": "newsletter",
     "title": "The AI Valley",
     "creator": "The AI Valley",
     "show": "Newsletter",
@@ -1107,7 +1107,7 @@
     "timeCommitment": "15min"
   },
   {
-    "type": "article",
+    "type": "newsletter",
     "title": "The Looking Glass",
     "creator": "Julie Zhuo",
     "show": "Newsletter",

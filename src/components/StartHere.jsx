@@ -404,7 +404,7 @@ export function StartHere({ items, isBookmarked, onBookmarkToggle, onSelectBook 
         <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-4" style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-text)', maxWidth: 560 }}>
           {t('hero_title')}
         </h1>
-        <p className="text-sm leading-relaxed mb-6" style={{ color: 'var(--th-text-2)', maxWidth: 480, lineHeight: 1.8 }}>
+        <p className="text-base leading-relaxed mb-6" style={{ color: 'var(--th-text-2)', maxWidth: 480, lineHeight: 1.8 }}>
           {t('hero_desc')}
         </p>
         <div className="flex flex-wrap gap-3">
@@ -427,7 +427,7 @@ export function StartHere({ items, isBookmarked, onBookmarkToggle, onSelectBook 
         <h1 className="text-4xl leading-tight mb-2" style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-text)' }}>
           {t('start_here_h1')}
         </h1>
-        <p className="text-sm max-w-lg" style={{ color: 'var(--th-text-2)', lineHeight: 1.7 }}>
+        <p className="text-base max-w-lg" style={{ color: 'var(--th-text-2)', lineHeight: 1.7 }}>
           {t('start_here_desc')}
         </p>
 
