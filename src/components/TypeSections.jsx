@@ -34,6 +34,14 @@ function extractVideoId(url) {
   return m ? m[1] : null
 }
 
+const TYPE_COLORS = {
+  video:   '#5B8CFF',
+  podcast: '#A855F7',
+  book:    '#C8974A',
+  article: '#4CAF8A',
+  website: '#4CAF8A',
+}
+
 /** Floating thumbnail preview — always dark-themed (tooltip style) */
 function ThumbnailPreview({ item, y }) {
   const videoId = (item.type === 'video' || item.type === 'podcast') ? extractVideoId(item.url) : null
@@ -43,8 +51,8 @@ function ThumbnailPreview({ item, y }) {
   const creator = item.creator || item.author || ''
   const palette = BOOK_PALETTES[titleHash(item.title)]
   const isPortrait = !thumbnail && coverUrl
-
-  if (!src) return null
+  const typeColor = TYPE_COLORS[item.type] || '#C8974A'
+  const typeLabel = item.type ? item.type.charAt(0).toUpperCase() + item.type.slice(1) : ''
 
   return (
     <motion.div
@@ -63,39 +71,84 @@ function ThumbnailPreview({ item, y }) {
         borderRadius: 12,
         overflow: 'hidden',
         background: '#0E0D0B',
-        border: '1px solid rgba(200,151,74,0.22)',
+        border: `1px solid ${src ? 'rgba(200,151,74,0.22)' : `${typeColor}33`}`,
         boxShadow: '0 16px 48px rgba(0,0,0,0.65)',
       }}
     >
-      {/* Image */}
-      <div
-        style={{
-          position: 'relative',
-          aspectRatio: isPortrait ? '2/3' : '16/9',
-          overflow: 'hidden',
-          background: `linear-gradient(160deg, ${palette.from} 0%, ${palette.to} 100%)`,
-        }}
-      >
-        <img
-          src={src}
-          alt={item.title}
-          onError={(e) => { e.target.style.display = 'none' }}
-          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-        />
-        <div style={{
-          position: 'absolute', inset: 0,
-          background: 'linear-gradient(to top, rgba(8,7,6,0.8) 0%, transparent 50%)',
-        }} />
-      </div>
-      {/* Info */}
-      <div style={{ padding: '10px 13px 12px' }}>
-        <p style={{ fontSize: 12, fontWeight: 500, color: '#EDE5D8', lineHeight: 1.4, marginBottom: 3 }}>
-          {item.title}
-        </p>
-        {creator && (
-          <p style={{ fontSize: 11, color: '#817D78', lineHeight: 1.3 }}>{creator}</p>
-        )}
-      </div>
+      {src ? (
+        /* Image-based preview (books, videos, podcasts) */
+        <>
+          <div
+            style={{
+              position: 'relative',
+              aspectRatio: isPortrait ? '2/3' : '16/9',
+              overflow: 'hidden',
+              background: `linear-gradient(160deg, ${palette.from} 0%, ${palette.to} 100%)`,
+            }}
+          >
+            <img
+              src={src}
+              alt={item.title}
+              onError={(e) => { e.target.style.display = 'none' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            />
+            <div style={{
+              position: 'absolute', inset: 0,
+              background: 'linear-gradient(to top, rgba(8,7,6,0.8) 0%, transparent 50%)',
+            }} />
+          </div>
+          <div style={{ padding: '10px 13px 12px' }}>
+            <p style={{ fontSize: 12, fontWeight: 500, color: '#EDE5D8', lineHeight: 1.4, marginBottom: 3 }}>
+              {item.title}
+            </p>
+            {creator && (
+              <p style={{ fontSize: 11, color: '#817D78', lineHeight: 1.3 }}>{creator}</p>
+            )}
+          </div>
+        </>
+      ) : (
+        /* Text-based preview (articles, websites) */
+        <div
+          style={{
+            position: 'relative',
+            aspectRatio: '4/3',
+            overflow: 'hidden',
+            background: 'linear-gradient(135deg, #0D0E18 0%, #0A120A 50%, #0E0D0B 100%)',
+          }}
+        >
+          {/* Decorative glow */}
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: `radial-gradient(ellipse at 20% 60%, ${typeColor}18 0%, transparent 60%), radial-gradient(ellipse at 80% 10%, ${typeColor}0d 0%, transparent 50%)`,
+          }} />
+          {/* Large decorative quote mark */}
+          <div style={{
+            position: 'absolute', right: 10, top: 4, fontSize: 88, lineHeight: 1,
+            fontFamily: 'Instrument Serif, Georgia, serif',
+            color: `${typeColor}0a`, pointerEvents: 'none', userSelect: 'none',
+          }}>"</div>
+          {/* Content */}
+          <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '13px 14px 14px' }}>
+            <span style={{
+              display: 'inline-block', fontSize: 9, fontWeight: 600, letterSpacing: '0.14em',
+              textTransform: 'uppercase', color: typeColor,
+            }}>
+              {typeLabel}
+            </span>
+            <div>
+              <p style={{
+                fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic',
+                fontSize: 13, color: '#EDE5D8', lineHeight: 1.4, marginBottom: 5,
+              }}>
+                {item.title}
+              </p>
+              {creator && (
+                <p style={{ fontSize: 10, color: `${typeColor}80`, lineHeight: 1.3 }}>{creator}</p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </motion.div>
   )
 }
@@ -111,9 +164,7 @@ function ListRow({ item, index, onSelectBook }) {
   const creator = item.creator || item.author || ''
   const isLink = item.type !== 'book' && item.url && item.url !== '#'
 
-  // Check if item has a previewable thumbnail
   const videoId = (item.type === 'video' || item.type === 'podcast') ? extractVideoId(item.url) : null
-  const hasThumbnail = videoId || item.isbn
 
   function handleEnter(e) {
     const rect = e.currentTarget.getBoundingClientRect()
@@ -207,7 +258,7 @@ function ListRow({ item, index, onSelectBook }) {
 
       {/* Floating thumbnail preview */}
       <AnimatePresence>
-        {hovered && hasThumbnail && (
+        {hovered && (
           <ThumbnailPreview key={item.title} item={item} y={previewY} />
         )}
       </AnimatePresence>
