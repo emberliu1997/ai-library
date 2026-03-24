@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MasonryGrid } from './MasonryGrid'
-import { Bookmark, ExternalLink } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 
 const TYPE_ORDER = ['video', 'podcast', 'website', 'article', 'book']
@@ -101,13 +101,12 @@ function ThumbnailPreview({ item, y }) {
 }
 
 /** Compact list row used in list-view mode */
-function ListRow({ item, index, isBookmarked, onBookmarkToggle, onSelectBook }) {
+function ListRow({ item, index, onSelectBook }) {
   const [hovered, setHovered] = useState(false)
   const [previewY, setPreviewY] = useState(0)
   const { lang } = useLanguage()
   const isCN = lang === 'cn'
 
-  const bookmarked = isBookmarked(item.title)
   const displayTitle = isCN ? (item.title_cn || item.title) : item.title
   const creator = item.creator || item.author || ''
   const isLink = item.type !== 'book' && item.url && item.url !== '#'
@@ -178,18 +177,6 @@ function ListRow({ item, index, isBookmarked, onBookmarkToggle, onSelectBook }) 
             style={{ color: '#C8974A' }}
           />
         )}
-        <button
-          onClick={(e) => { e.preventDefault(); e.stopPropagation(); onBookmarkToggle(item.title) }}
-          aria-label={bookmarked ? `Remove bookmark: ${item.title}` : `Bookmark: ${item.title}`}
-          aria-pressed={bookmarked}
-          className="p-1 rounded transition-opacity opacity-0 group-hover:opacity-100"
-          style={{ background: 'none' }}
-        >
-          <Bookmark
-            className="w-3 h-3"
-            style={{ color: bookmarked ? '#C8974A' : 'var(--th-text-2)', fill: bookmarked ? '#C8974A' : 'none' }}
-          />
-        </button>
       </div>
     </motion.div>
   )

@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 import { motion, AnimatePresence, useMotionValue, useTransform, useSpring } from 'framer-motion'
-import { Bookmark, Play, Headphones, ExternalLink } from 'lucide-react'
+import { Play, Headphones, ExternalLink } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 import { useTheme } from '../context/ThemeContext'
 
@@ -38,7 +38,7 @@ function extractVideoId(url) {
   return m ? m[1] : null
 }
 
-function TimelineCard({ item, index, isBookmarked, onBookmarkToggle, onSelectBook, isLast, isExplored, onExplore }) {
+function TimelineCard({ item, index, onSelectBook, isLast, isExplored, onExplore }) {
   const [hovered, setHovered] = useState(false)
   const [shimmer, setShimmer] = useState(false)
   const { theme } = useTheme()
@@ -53,7 +53,7 @@ function TimelineCard({ item, index, isBookmarked, onBookmarkToggle, onSelectBoo
   const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-5, 5]), { stiffness: 300, damping: 30 })
 
   const meta = TYPE_META[item.type] || TYPE_META.article
-  const bookmarked = isBookmarked(item.title)
+
   const displayTitle = isCN ? (item.title_cn || item.title) : item.title
   const displayReason = isCN ? (item.startHereReason_cn || item.startHereReason) : item.startHereReason
   const videoId = (item.type === 'video' || item.type === 'podcast') ? extractVideoId(item.url) : null
@@ -242,15 +242,6 @@ function TimelineCard({ item, index, isBookmarked, onBookmarkToggle, onSelectBoo
                       </motion.div>
                     </div>
                   )}
-                  <button
-                    onClick={(e) => { e.preventDefault(); e.stopPropagation(); onBookmarkToggle(item.title) }}
-                    className="absolute top-3 right-3 p-1.5 rounded-lg"
-                    aria-label={bookmarked ? `Remove bookmark: ${item.title}` : `Bookmark: ${item.title}`}
-                    aria-pressed={bookmarked}
-                    style={{ background: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(6px)' }}
-                  >
-                    <Bookmark className="w-3.5 h-3.5" style={{ color: bookmarked ? '#C8974A' : 'rgba(255,255,255,0.5)', fill: bookmarked ? '#C8974A' : 'none' }} />
-                  </button>
                   <div className="absolute bottom-3 left-3 flex items-center gap-2">
                     <span className="text-xs font-medium uppercase tracking-widest px-2 py-1 rounded-md" style={{ color: meta.color, background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(6px)', letterSpacing: '0.13em' }}>
                       {meta.label}
@@ -274,18 +265,7 @@ function TimelineCard({ item, index, isBookmarked, onBookmarkToggle, onSelectBoo
                       </span>
                     )}
                   </div>
-                  <div className="flex items-center gap-2">
-                    <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: 'var(--th-text-2)' }} />
-                    <button
-                      onClick={(e) => { e.preventDefault(); e.stopPropagation(); onBookmarkToggle(item.title) }}
-                      aria-label={bookmarked ? `Remove bookmark: ${item.title}` : `Bookmark: ${item.title}`}
-                      aria-pressed={bookmarked}
-                      className="p-1 rounded"
-                      style={{ background: 'transparent' }}
-                    >
-                      <Bookmark className="w-3.5 h-3.5" style={{ color: bookmarked ? '#C8974A' : 'var(--th-text-3)', fill: bookmarked ? '#C8974A' : 'none' }} />
-                    </button>
-                  </div>
+                  <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: 'var(--th-text-2)' }} />
                 </div>
               )}
 

@@ -40,6 +40,9 @@ function titleHash(title) {
 
 function SpotlightCard({ item, stagePick }) {
   if (!item) return null
+  const { lang } = useLanguage()
+  const isCN = lang === 'cn'
+  const displayTitle = isCN ? (item.title_cn || item.title) : item.title
 
   const isLink = item.type !== 'book'
   const linkProps = isLink && item.url && item.url !== '#'
@@ -98,7 +101,7 @@ function SpotlightCard({ item, stagePick }) {
           className="leading-snug mb-2"
           style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: '#EDE5D8', fontSize: 22, maxWidth: 520 }}
         >
-          {item.title}
+          {displayTitle}
         </h3>
         <p className="text-sm" style={{ color: '#96928D' }}>
           {creator}

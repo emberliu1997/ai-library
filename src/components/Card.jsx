@@ -185,24 +185,6 @@ export function Card({ item, isBookmarked, onBookmarkToggle, onSelect, index = 0
           </div>
         )}
 
-        {/* Bookmark — always positioned outside the main interactive area */}
-        <button
-          onClick={(e) => { e.stopPropagation(); onBookmarkToggle(item.title) }}
-          className="absolute z-20 p-1.5 rounded-lg transition-colors"
-          style={{
-            top: hasImage ? 10 : 8,
-            right: hasImage ? 10 : 6,
-            background: hasImage ? 'rgba(0,0,0,0.55)' : 'transparent',
-            backdropFilter: hasImage ? 'blur(6px)' : 'none',
-          }}
-          aria-label={bookmarked ? `Remove bookmark: ${item.title}` : `Bookmark: ${item.title}`}
-          aria-pressed={bookmarked}
-        >
-          <Bookmark
-            className="w-3 h-3"
-            style={{ color: bookmarked ? '#C8974A' : hasImage ? 'rgba(255,255,255,0.5)' : 'rgba(255,255,255,0.25)', fill: bookmarked ? '#C8974A' : 'none' }}
-          />
-        </button>
       </div>
     </motion.div>
   )
