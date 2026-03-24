@@ -194,17 +194,25 @@ export function GoDeeper({
             <div key={stageId} ref={(el) => { stageRefs.current[stageId] = el }}>
               {/* Stage header */}
               <div className="mb-6">
-                <div className="flex items-baseline gap-3 mb-2">
-                  <span
-                    className="text-5xl"
-                    style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-border-sub)', lineHeight: 1 }}
-                  >
-                    {meta.number}
-                  </span>
-                  <h2 className="text-2xl" style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-text)' }}>
-                    {t(`stage_${stageId.replace(/\s+/g, '_')}`)}
-                  </h2>
-                </div>
+                {!activeStage ? (
+                  /* All-stages view: show number + name */
+                  <div className="flex items-baseline gap-3 mb-2">
+                    <span
+                      className="text-5xl"
+                      style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-border-sub)', lineHeight: 1 }}
+                    >
+                      {meta.number}
+                    </span>
+                    <h2 className="text-2xl" style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-text)' }}>
+                      {t(`stage_${stageId.replace(/\s+/g, '_')}`)}
+                    </h2>
+                  </div>
+                ) : (
+                  /* Single-stage view: show number as subtle label only */
+                  <p className="text-xs font-medium uppercase tracking-widest mb-3" style={{ color: 'var(--th-text-3)', letterSpacing: '0.16em' }}>
+                    {meta.number} / 04
+                  </p>
+                )}
                 <p className="text-sm max-w-xl" style={{ color: 'var(--th-text-2)', lineHeight: 1.75 }}>
                   {t(framingKey)}
                 </p>
