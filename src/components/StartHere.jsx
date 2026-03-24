@@ -42,8 +42,9 @@ function TimelineCard({ item, index, isBookmarked, onBookmarkToggle, onSelectBoo
   const [hovered, setHovered] = useState(false)
   const [shimmer, setShimmer] = useState(false)
   const { theme } = useTheme()
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const isDark = theme === 'dark'
+  const isCN = lang === 'cn'
 
   // 3D tilt via motion values
   const mouseX = useMotionValue(0)
@@ -53,6 +54,8 @@ function TimelineCard({ item, index, isBookmarked, onBookmarkToggle, onSelectBoo
 
   const meta = TYPE_META[item.type] || TYPE_META.article
   const bookmarked = isBookmarked(item.title)
+  const displayTitle = isCN ? (item.title_cn || item.title) : item.title
+  const displayReason = isCN ? (item.startHereReason_cn || item.startHereReason) : item.startHereReason
   const videoId = (item.type === 'video' || item.type === 'podcast') ? extractVideoId(item.url) : null
   const thumbnail = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : null
   const coverUrl = item.isbn ? `https://covers.openlibrary.org/b/isbn/${item.isbn}-L.jpg` : null
@@ -289,7 +292,7 @@ function TimelineCard({ item, index, isBookmarked, onBookmarkToggle, onSelectBoo
               {/* Content */}
               <div className="p-4">
                 <p className="font-medium mb-1 line-clamp-2" style={{ color: 'var(--th-text)', fontSize: 14, lineHeight: 1.45 }}>
-                  {item.title}
+                  {displayTitle}
                 </p>
                 <p className="text-xs mb-0" style={{ color: 'var(--th-text-3)' }}>
                   {creator}
@@ -335,7 +338,7 @@ function TimelineCard({ item, index, isBookmarked, onBookmarkToggle, onSelectBoo
                       className="text-base leading-snug mb-1"
                       style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: '#EDE5D8' }}
                     >
-                      {item.title}
+                      {displayTitle}
                     </motion.h3>
                     <motion.p
                       initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.13 }}
@@ -356,7 +359,7 @@ function TimelineCard({ item, index, isBookmarked, onBookmarkToggle, onSelectBoo
                       className="text-xs leading-relaxed"
                       style={{ color: '#96928D' }}
                     >
-                      {item.startHereReason}
+                      {displayReason}
                     </motion.p>
                     {item.timeCommitment && (
                       <motion.div
@@ -401,19 +404,19 @@ export function StartHere({ items, isBookmarked, onBookmarkToggle, onSelectBook 
       {/* Hero intro */}
       <div className="mb-12 sm:mb-16 pb-10 sm:pb-12" style={{ borderBottom: '1px solid var(--th-border-sub)' }}>
         <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-4" style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-text)', maxWidth: 560 }}>
-          Ember's AI Learning Library
+          {t('hero_title')}
         </h1>
         <p className="text-sm leading-relaxed mb-6" style={{ color: 'var(--th-text-2)', maxWidth: 480, lineHeight: 1.8 }}>
-          A collection of the best resources for learning AI and design — free to access and friendly to non-technical people.
+          {t('hero_desc')}
         </p>
         <div className="flex flex-wrap gap-3">
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs" style={{ background: 'rgba(200,151,74,0.07)', border: '1px solid rgba(200,151,74,0.15)', color: 'var(--th-text-2)' }}>
             <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#C8974A', display: 'inline-block' }} />
-            Free to access
+            {t('hero_badge_free')}
           </div>
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs" style={{ background: 'rgba(200,151,74,0.07)', border: '1px solid rgba(200,151,74,0.15)', color: 'var(--th-text-2)' }}>
             <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#C8974A', display: 'inline-block' }} />
-            Non-technical friendly
+            {t('hero_badge_nontechnical')}
           </div>
         </div>
       </div>

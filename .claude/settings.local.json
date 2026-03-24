@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:mobbin.com)",
-      "WebFetch(domain:designcode.io)"
+      "WebFetch(domain:designcode.io)",
+      "Bash(curl -s \"https://openlibrary.org/search.json?title=Leaders+Eat+Last&author=Simon+Sinek&limit=5\")"
     ]
   }
 }

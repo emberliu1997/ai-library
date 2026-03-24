@@ -11,7 +11,10 @@
     ],
     "timeCommitment": "1hr",
     "startHere": true,
-    "startHereReason": "No one explains the mechanics more clearly without dumbing it down."
+    "startHereReason": "No one explains the mechanics more clearly without dumbing it down.",
+    "title_cn": "【1小时讲座】大语言模型入门",
+    "implication_cn": "对 LLM 工作原理最清晰的讲解——无需数学基础，只讲直觉。",
+    "startHereReason_cn": "没有人能比他解释得更清楚，又不让你感到智商被低估。"
   },
   {
     "type": "video",
@@ -23,7 +26,9 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "15min"
+    "timeCommitment": "15min",
+    "title_cn": "GPT 究竟是什么？变换器模型可视化入门",
+    "implication_cn": "视觉化、直观地深入了解 Transformer 模型的处理方式。"
   },
   {
     "type": "video",
@@ -35,7 +40,9 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "深入剖析 ChatGPT 等大语言模型",
+    "implication_cn": "对现代大语言模型的深度技术解读——适合想深挖的人。"
   },
   {
     "type": "video",
@@ -48,7 +55,9 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "1hr"
+    "timeCommitment": "1hr",
+    "title_cn": "与 Jony Ive 的对话",
+    "implication_cn": "我们能感受到用心。用心做一件事，是一种感恩的行为。"
   },
   {
     "type": "article",
@@ -63,7 +72,10 @@
     ],
     "timeCommitment": "15min",
     "startHere": true,
-    "startHereReason": "When AI can execute anything, the question shifts: do you know what's worth making?"
+    "startHereReason": "When AI can execute anything, the question shifts: do you know what's worth making?",
+    "title_cn": "为什么品味比以往任何时候都更重要",
+    "implication_cn": "在 AI 时代，品味是最后的护城河——知道什么是好的，比以往更稀缺、更有价值。",
+    "startHereReason_cn": "当 AI 能执行一切时，问题就变成了：你知道什么值得做吗？"
   },
   {
     "type": "article",
@@ -75,7 +87,9 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "15min"
+    "timeCommitment": "15min",
+    "title_cn": "Human 3.0 与 AI 助力设计师成长",
+    "implication_cn": "探索 AI 时代设计角色的演变。"
   },
   {
     "type": "book",
@@ -90,7 +104,10 @@
       "Mental Models",
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "预测机器",
+    "implication_cn": "AI 战略的经济学框架。",
+    "deepThinkingBridge_cn": "AI 把预测成本降到接近零——这意味着它改变的不只是工具，而是整个决策架构。作为设计师，你需要设计的界面不是让人类做决策，而是让人类评审 AI 的决策。"
   },
   {
     "type": "book",
@@ -104,7 +121,10 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "系统之美",
+    "implication_cn": "理解相互关联的反馈回路如何驱动世界的入门读本。",
+    "deepThinkingBridge_cn": "当 AI 成为系统的一部分时，它不再是孤立的工具，而是引入了新的反馈回路。Meadows 的框架帮助你看清，AI 在更大系统中会如何放大意想不到的行为。"
   },
   {
     "type": "book",
@@ -118,7 +138,10 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "人类简史",
+    "implication_cn": "关于人类的简史，以及凝聚我们的故事。",
+    "deepThinkingBridge_cn": "AI 正在创造新的「共同虚构」——就像货币和民族国家一样，它塑造着集体行为。Harari 的框架让你思考：AI 叙事如何重塑我们视为「真实」的东西。"
   },
   {
     "type": "book",
@@ -132,7 +155,9 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "金钱心理学",
+    "implication_cn": "关于财富、贪婪与幸福的永恒启示。"
   },
   {
     "type": "book",
@@ -146,7 +171,9 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "原子习惯",
+    "implication_cn": "微小改变，非凡成果。"
   },
   {
     "type": "book",
@@ -160,7 +187,9 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "思考致富",
+    "implication_cn": "为什么思维方式才是真正的约束，而非能力。"
   },
   {
     "type": "book",
@@ -174,7 +203,9 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "午夜图书馆",
+    "implication_cn": "一部关于我们本可拥有的无数种人生的小说。"
   },
   {
     "type": "book",
@@ -189,7 +220,10 @@
       "Responsible AI",
       "Mental Models"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "揭开 AI 的面具",
+    "implication_cn": "在机器主导的世界里，守护人之为人的使命。",
+    "deepThinkingBridge_cn": "在我们热衷于构建 AI 系统时，很容易忽视它对边缘群体的影响。Buolamwini 的工作提醒设计师：没有中立的算法——每个设计决策都有其所服务和所忽视的对象。"
   },
   {
     "type": "book",
@@ -206,7 +240,11 @@
     ],
     "timeCommitment": "3hr+",
     "startHere": true,
-    "startHereReason": "Before you design AI behavior, you need this language: affordances, signifiers, feedback."
+    "startHereReason": "Before you design AI behavior, you need this language: affordances, signifiers, feedback.",
+    "title_cn": "设计心理学",
+    "implication_cn": "以人为本设计的基本原则。",
+    "deepThinkingBridge_cn": "在设计 AI 智能体之前，你必须理解可供性与符指性。如果用户不知道如何与提示词交互，那就是这些核心原则的失败。",
+    "startHereReason_cn": "如果你要打造 AI 界面，这是必读的认知地图。"
   },
   {
     "type": "podcast",
@@ -221,7 +259,9 @@
     ],
     "timeCommitment": "1hr",
     "startHere": true,
-    "startHereReason": "Shortcut to 1,500 papers on what prompting techniques actually work."
+    "startHereReason": "Shortcut to 1,500 papers on what prompting techniques actually work.",
+    "title_cn": "2025 年 AI 提示词工程（Sander Schulhoff）",
+    "implication_cn": "综合 1500 多篇论文，告诉你哪些提示技巧真正有效。"
   },
   {
     "type": "video",
@@ -234,7 +274,10 @@
     "tags": [
       "Design Patterns"
     ],
-    "timeCommitment": "15min"
+    "timeCommitment": "15min",
+    "title_cn": "为什么设计师不能再信任设计流程",
+    "implication_cn": "设计师必须从崇拜流程转向专注于目标和结果。",
+    "startHereReason_cn": "一个发人深省的论点：AI 正在拆解「流程崇拜」——以及为什么这可能是件好事。"
   },
   {
     "type": "podcast",
@@ -247,7 +290,9 @@
     "tags": [
       "Design Patterns"
     ],
-    "timeCommitment": "1hr"
+    "timeCommitment": "1hr",
+    "title_cn": "设计流程已死，取而代之的是什么",
+    "implication_cn": "关于策展与逻辑优先于手工技艺的大师课。"
   },
   {
     "type": "podcast",
@@ -261,7 +306,9 @@
       "Strategy",
       "Design Patterns"
     ],
-    "timeCommitment": "1hr"
+    "timeCommitment": "1hr",
+    "title_cn": "Figma CEO：为什么 AI 让设计、工艺和品质成为新护城河",
+    "implication_cn": "在自动化世界里，品味是终极竞争优势。"
   },
   {
     "type": "podcast",
@@ -274,7 +321,9 @@
     "tags": [
       "Design Patterns"
     ],
-    "timeCommitment": "1hr"
+    "timeCommitment": "1hr",
+    "title_cn": "Hannah Hearth — AI 时代的设计职业",
+    "implication_cn": "在技能快速崩塌的时代，守护工艺与设计思维。"
   },
   {
     "type": "website",
@@ -286,7 +335,9 @@
     "tags": [
       "Design Patterns"
     ],
-    "timeCommitment": "15min"
+    "timeCommitment": "15min",
+    "title_cn": "AI 的形态",
+    "implication_cn": "一个探索 AI 用户体验模式最佳实践的模式库。"
   },
   {
     "type": "book",
@@ -300,7 +351,10 @@
     "tags": [
       "Design Patterns"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "交互设计精髓",
+    "implication_cn": "交互模式设计的蓝图。",
+    "deepThinkingBridge_cn": "AI 智能体是终极以目标为导向的工具。理解 Cooper 的概念是确保你的 AI 智能体不会成为令人困惑的「黑箱」的唯一途径。"
   },
   {
     "type": "book",
@@ -316,7 +370,10 @@
     ],
     "timeCommitment": "3hr+",
     "startHere": true,
-    "startHereReason": "AI's magic lives in small moments — this gives you the framework to design them."
+    "startHereReason": "AI's magic lives in small moments — this gives you the framework to design them.",
+    "title_cn": "微交互",
+    "implication_cn": "设计那些创造魔力的小时刻。",
+    "deepThinkingBridge_cn": "AI 输出通常是非即时的——它有延迟、有不确定性。Saffer 关于反馈与状态的研究，直接适用于设计 AI 处理时的加载态、错误态和成功态。"
   },
   {
     "type": "book",
@@ -330,7 +387,9 @@
     "tags": [
       "Design Patterns"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "用数据讲故事",
+    "implication_cn": "面向商业专业人士的数据可视化指南。"
   },
   {
     "type": "book",
@@ -344,7 +403,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "打造故事品牌",
+    "implication_cn": "厘清你的信息，让客户真正听进去。"
   },
   {
     "type": "book",
@@ -358,7 +419,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "让故事深入人心",
+    "implication_cn": "故事如何俘获客户、改变企业。"
   },
   {
     "type": "book",
@@ -372,7 +435,10 @@
     "tags": [
       "Design Patterns"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "创意甄选",
+    "implication_cn": "深入苹果以演示驱动文化的内部。",
+    "deepThinkingBridge_cn": "苹果的演示文化——向同伴展示真实可用的原型——与 AI 原型制作高度契合。当你能在数小时内构建一个功能原型时，选择展示什么就变成了核心的设计技能。"
   },
   {
     "type": "book",
@@ -386,7 +452,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "人性的弱点",
+    "implication_cn": "为下一代领导者更新的经典之作。"
   },
   {
     "type": "book",
@@ -400,7 +468,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "影响力",
+    "implication_cn": "说服心理学。"
   },
   {
     "type": "book",
@@ -414,7 +484,9 @@
     "tags": [
       "Prompt Design"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "永不妥协",
+    "implication_cn": "像生死攸关一样去谈判。"
   },
   {
     "type": "book",
@@ -428,7 +500,9 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "设计你的人生",
+    "implication_cn": "用设计思维打造充实而愉悦的人生。"
   },
   {
     "type": "podcast",
@@ -443,7 +517,9 @@
     ],
     "timeCommitment": "1hr",
     "startHere": true,
-    "startHereReason": "The shift from 'feels right' to 'here's how we measure it.'"
+    "startHereReason": "The shift from 'feels right' to 'here's how we measure it.'",
+    "title_cn": "为什么 AI 评估是最热门的新技能",
+    "implication_cn": "如何从「感觉对了」到「这是我们的衡量方式」。"
   },
   {
     "type": "podcast",
@@ -456,7 +532,9 @@
     "tags": [
       "Design Patterns"
     ],
-    "timeCommitment": "1hr"
+    "timeCommitment": "1hr",
+    "title_cn": "Emily Campbell — AI 用户体验深度解析",
+    "implication_cn": "构建让人感觉鲜活的界面的战术模式。"
   },
   {
     "type": "podcast",
@@ -469,7 +547,9 @@
     "tags": [
       "Design Patterns"
     ],
-    "timeCommitment": "1hr"
+    "timeCommitment": "1hr",
+    "title_cn": "Google Gemini 用户体验副总裁谈生成式 AI 工作流",
+    "implication_cn": "生成式 AI 正在模糊设计师与工程师之间的界限。"
   },
   {
     "type": "podcast",
@@ -483,7 +563,9 @@
       "Strategy",
       "Design Patterns"
     ],
-    "timeCommitment": "1hr"
+    "timeCommitment": "1hr",
+    "title_cn": "如何打造深受喜爱的 AI 产品",
+    "implication_cn": "是什么让人们爱上一款 AI 产品，而不是用完就忘。"
   },
   {
     "type": "website",
@@ -496,7 +578,9 @@
       "Design Patterns",
       "Responsible AI"
     ],
-    "timeCommitment": "15min"
+    "timeCommitment": "15min",
+    "title_cn": "人与 AI 指南",
+    "implication_cn": "帮助团队构建以人为本 AI 产品的工具包。"
   },
   {
     "type": "website",
@@ -508,7 +592,9 @@
     "tags": [
       "Design Patterns"
     ],
-    "timeCommitment": "15min"
+    "timeCommitment": "15min",
+    "title_cn": "AI 的用户体验",
+    "implication_cn": "AI 界面设计的模式、原则与案例研究。"
   },
   {
     "type": "website",
@@ -521,7 +607,9 @@
       "Design Patterns",
       "Responsible AI"
     ],
-    "timeCommitment": "15min"
+    "timeCommitment": "15min",
+    "title_cn": "微软 HAX 工具包",
+    "implication_cn": "帮助你创建更高效、更负责任的人机 AI 体验的协作工具。"
   },
   {
     "type": "website",
@@ -533,7 +621,9 @@
     "tags": [
       "Design Patterns"
     ],
-    "timeCommitment": "15min"
+    "timeCommitment": "15min",
+    "title_cn": "28 种 AI 设计模式",
+    "implication_cn": "28 种 AI 设计模式，附来自顶级产品的真实案例。"
   },
   {
     "type": "article",
@@ -546,7 +636,9 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "15min"
+    "timeCommitment": "15min",
+    "title_cn": "第 46 期：人人都在谈「品味」，它究竟是什么？",
+    "implication_cn": "2025 年，「品味」成了产品圈人人挂在嘴边的词。本文厘清了它的真正含义。"
   },
   {
     "type": "book",
@@ -560,7 +652,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "彻底坦诚",
+    "implication_cn": "做一个不失去人性的强力上司。"
   },
   {
     "type": "book",
@@ -574,7 +668,9 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "最好的告别",
+    "implication_cn": "医学与生命终点真正重要的事。"
   },
   {
     "type": "book",
@@ -589,7 +685,9 @@
       "Mental Models",
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "价值投资者的自我修养",
+    "implication_cn": "追求财富、智慧与启迪的蜕变之旅。"
   },
   {
     "type": "book",
@@ -603,7 +701,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "权力的 48 条法则",
+    "implication_cn": "策略、杠杆与人性的大师课。"
   },
   {
     "type": "book",
@@ -617,7 +717,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "从「为什么」开始",
+    "implication_cn": "伟大的领导者如何激励所有人采取行动。"
   },
   {
     "type": "book",
@@ -631,7 +733,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "敢于领导",
+    "implication_cn": "勇敢的工作，艰难的对话，完整的内心。"
   },
   {
     "type": "book",
@@ -645,7 +749,9 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "另一种选择",
+    "implication_cn": "面对逆境，建立韧性，重新找到喜悦。"
   },
   {
     "type": "book",
@@ -659,7 +765,9 @@
     "tags": [
       "Mental Models"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "被白痴包围",
+    "implication_cn": "四种人类行为类型及沟通之道。"
   },
   {
     "type": "video",
@@ -674,7 +782,10 @@
     ],
     "timeCommitment": "1hr",
     "startHere": true,
-    "startHereReason": "Clearest orientation to agentic patterns and why they matter more than model upgrades."
+    "startHereReason": "Clearest orientation to agentic patterns and why they matter more than model upgrades.",
+    "title_cn": "AI 智能体的崛起（Andrew Ng，BUILD 2024）",
+    "implication_cn": "为什么智能体模式比模型升级更重要——以及如何思考它们。",
+    "startHereReason_cn": "对智能体模式最清晰的入门讲解，以及为什么它们比模型升级更重要。"
   },
   {
     "type": "video",
@@ -688,7 +799,9 @@
       "Agents",
       "Strategy"
     ],
-    "timeCommitment": "15min"
+    "timeCommitment": "15min",
+    "title_cn": "Claude Code 团队如何以闪电速度发布产品",
+    "implication_cn": "驾驭高速 AI 发布周期。"
   },
   {
     "type": "video",
@@ -702,7 +815,9 @@
       "Agents",
       "Strategy"
     ],
-    "timeCommitment": "15min"
+    "timeCommitment": "15min",
+    "title_cn": "从 Arc 到 Dia：构建 AI 浏览器的经验教训",
+    "implication_cn": "当你从头重建一款深受喜爱的产品时会发生什么。"
   },
   {
     "type": "podcast",
@@ -716,7 +831,9 @@
       "Strategy",
       "Agents"
     ],
-    "timeCommitment": "1hr"
+    "timeCommitment": "1hr",
+    "title_cn": "走进 ChatGPT：史上增长最快的产品",
+    "implication_cn": "打造和发布全球最常用 AI 产品需要什么。"
   },
   {
     "type": "podcast",
@@ -729,7 +846,9 @@
     "tags": [
       "Agents"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "OpenAI姚顺雨：6年Agent研究、语言智能体与吞噬边界",
+    "implication_cn": "关于 AI 智能体、人机边界以及 AI 如何重塑我们工作方式的 3 小时对话。"
   },
   {
     "type": "book",
@@ -743,7 +862,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "启示录",
+    "implication_cn": "如何打造用户喜爱的科技产品。"
   },
   {
     "type": "book",
@@ -758,7 +879,9 @@
       "Strategy",
       "Agents"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "成为经理人",
+    "implication_cn": "当所有人都开始仰望你时，该怎么办。"
   },
   {
     "type": "book",
@@ -772,7 +895,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "前 90 天",
+    "implication_cn": "经过验证的快速上手策略。"
   },
   {
     "type": "book",
@@ -787,7 +912,9 @@
       "Responsible AI",
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "公平工作",
+    "implication_cn": "快速、公平地把事情做成。"
   },
   {
     "type": "book",
@@ -801,7 +928,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "领袖最后吃饭",
+    "implication_cn": "为什么有些团队凝聚一心，另一些却一盘散沙。"
   },
   {
     "type": "book",
@@ -815,7 +944,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "一生的旅程",
+    "implication_cn": "担任迪士尼 CEO 15 年所学到的教训。"
   },
   {
     "type": "book",
@@ -829,7 +960,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "你的下五步棋",
+    "implication_cn": "掌握商业战略的艺术。"
   },
   {
     "type": "book",
@@ -843,7 +976,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "共同基金常识",
+    "implication_cn": "保证获得市场公平份额的唯一方法。"
   },
   {
     "type": "book",
@@ -857,7 +992,9 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "向前一步",
+    "implication_cn": "女性、工作与领导意志。"
   },
   {
     "type": "book",
@@ -871,6 +1008,8 @@
     "tags": [
       "Strategy"
     ],
-    "timeCommitment": "3hr+"
+    "timeCommitment": "3hr+",
+    "title_cn": "赦免",
+    "implication_cn": "总统特赦的政治博弈。"
   }
 ]

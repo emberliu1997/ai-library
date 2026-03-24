@@ -21,12 +21,14 @@ const NEWSLETTERS = [
   { name: "Lenny's Newsletter", url: 'https://www.lennysnewsletter.com', annotation: 'Deep-dives on AI product strategy, prompting, and evals from the people shipping it.', cadence: 'Weekly' },
   { name: 'TLDR AI', url: 'https://tldr.tech/ai', annotation: '5-minute daily brief. Use it to stay aware, not to go deep.', cadence: 'Daily' },
   { name: 'Interconnects (Nathan Lambert)', url: 'https://www.interconnects.ai', annotation: 'The clearest writing on how AI models are actually trained and evaluated.', cadence: 'Weekly' },
+  { name: 'Latent Space', url: 'https://www.latent.space', annotation: "Technical but accessible. Covers what's actually happening at the AI frontier.", cadence: 'Weekly' },
 ]
 
 const SHOWS = [
   { name: "Lenny's Podcast", url: 'https://www.lennyspodcast.com', annotation: 'Best show for AI product builders. Every episode is a masterclass in shipping AI.' },
-  { name: 'Latent Space', url: 'https://www.latent.space', annotation: "Technical but accessible. Covers what's actually happening at the AI frontier." },
   { name: 'Lex Fridman Podcast', url: 'https://lexfridman.com/podcast', annotation: 'Long-form with the people building AI. Dense but irreplaceable.' },
+  { name: 'Dive Club', url: 'https://www.youtube.com/@joindiveclub', annotation: 'Deep dives into AI tools and workflows for designers and builders.' },
+  { name: 'UX Coffee', url: 'https://open.spotify.com/show/3Nx0Z9ZkIsJAWg4gGv2tWA', annotation: 'Conversations on UX craft, career, and the future of design.' },
 ]
 
 function PersonCard({ item, index }) {

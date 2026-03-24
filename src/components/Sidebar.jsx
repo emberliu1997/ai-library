@@ -220,7 +220,7 @@ export function Sidebar({ activeView, onViewChange, activeStage, onStageChange, 
           {t('subscribe_teaser')}
         </p>
         <a
-          href="https://designandintelligence.substack.com"
+          href="https://emberliu.substack.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full block text-center text-xs font-medium py-2 rounded-md transition-colors"

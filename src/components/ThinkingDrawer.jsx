@@ -4,7 +4,8 @@ import { X, ExternalLink } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 
 export function ThinkingDrawer({ item, onClose }) {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
+  const isCN = lang === 'cn'
   const closeRef = useRef(null)
 
   useEffect(() => {
@@ -99,7 +100,7 @@ export function ThinkingDrawer({ item, onClose }) {
                   className="text-2xl leading-tight"
                   style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: '#EDE5D8' }}
                 >
-                  {item.title}
+                  {isCN ? (item.title_cn || item.title) : item.title}
                 </h2>
                 <p className="text-sm mt-2" style={{ color: '#96928D' }}>
                   {t('by')} {item.author}
@@ -112,12 +113,12 @@ export function ThinkingDrawer({ item, onClose }) {
                   {t('why_it_matters')}
                 </p>
                 <p className="text-sm leading-relaxed" style={{ color: '#A09890' }}>
-                  {item.implication}
+                  {isCN ? (item.implication_cn || item.implication) : item.implication}
                 </p>
               </div>
 
               {/* The Connection */}
-              {item.deepThinkingBridge && (
+              {(item.deepThinkingBridge || item.deepThinkingBridge_cn) && (
                 <div className="rounded-xl p-5" style={{ background: '#0D1424', border: '1px solid #1A2744' }}>
                   <div className="flex items-center gap-2 mb-3">
                     <div className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#C8974A' }} aria-hidden="true" />
@@ -126,7 +127,7 @@ export function ThinkingDrawer({ item, onClose }) {
                     </p>
                   </div>
                   <p className="text-sm leading-relaxed" style={{ color: '#8BA3C7' }}>
-                    {item.deepThinkingBridge}
+                    {isCN ? (item.deepThinkingBridge_cn || item.deepThinkingBridge) : item.deepThinkingBridge}
                   </p>
                 </div>
               )}
@@ -143,7 +144,7 @@ export function ThinkingDrawer({ item, onClose }) {
                   onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(200,151,74,0.1)' }}
                 >
                   <ExternalLink className="w-3.5 h-3.5" />
-                  Find this book
+                  {t('find_this_book')}
                 </a>
               )}
 

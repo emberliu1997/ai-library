@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Bookmark, Play, Headphones, FileText, Globe } from 'lucide-react'
+import { useLanguage } from '../context/LanguageContext'
 
 const BOOK_PALETTES = [
   { from: '#0a0e27', to: '#1a2744' },
@@ -38,12 +39,16 @@ const ASPECT = {
 }
 
 export function Card({ item, isBookmarked, onBookmarkToggle, onSelect, index = 0 }) {
+  const { lang } = useLanguage()
+  const isCN = lang === 'cn'
   const cfg = TYPE_CONFIG[item.type] || TYPE_CONFIG.article
   const bookmarked = isBookmarked(item.title)
   const videoId = (item.type === 'video' || item.type === 'podcast') ? extractVideoId(item.url) : null
   const thumbnail = videoId ? `https://img.youtube.com/vi/${videoId}/mqdefault.jpg` : null
   const coverUrl = item.isbn ? `https://covers.openlibrary.org/b/isbn/${item.isbn}-L.jpg` : null
   const palette = BOOK_PALETTES[titleHash(item.title)]
+  const displayTitle = isCN ? (item.title_cn || item.title) : item.title
+  const displayImplication = isCN ? (item.implication_cn || item.implication) : item.implication
   const creator = item.creator || item.author || ''
   const hasImage = ASPECT[item.type] !== null
 
@@ -66,7 +71,7 @@ export function Card({ item, isBookmarked, onBookmarkToggle, onSelect, index = 0
         {item.type === 'book' && !coverUrl && (
           <div className="absolute inset-0 flex flex-col justify-end p-4" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%)' }}>
             <p className="text-sm leading-snug line-clamp-3" style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: '#EDE5D8' }}>
-              {item.title}
+              {displayTitle}
             </p>
             <p className="text-xs mt-1 opacity-60" style={{ color: '#EDE5D8' }}>{item.author}</p>
           </div>
@@ -105,11 +110,11 @@ export function Card({ item, isBookmarked, onBookmarkToggle, onSelect, index = 0
           </span>
         </div>
         <p className="text-[13px] font-medium leading-snug line-clamp-2" style={{ color: '#EDE5D8', lineHeight: 1.45 }}>
-          {item.title}
+          {displayTitle}
         </p>
-        {item.implication && (
+        {displayImplication && (
           <p className="text-xs mt-1.5 leading-relaxed line-clamp-2" style={{ color: '#96928D' }}>
-            {item.implication}
+            {displayImplication}
           </p>
         )}
         <p className="text-xs mt-2.5" style={{ color: '#817D78' }}>

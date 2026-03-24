@@ -104,8 +104,11 @@ function ThumbnailPreview({ item, y }) {
 function ListRow({ item, index, isBookmarked, onBookmarkToggle, onSelectBook }) {
   const [hovered, setHovered] = useState(false)
   const [previewY, setPreviewY] = useState(0)
+  const { lang } = useLanguage()
+  const isCN = lang === 'cn'
 
   const bookmarked = isBookmarked(item.title)
+  const displayTitle = isCN ? (item.title_cn || item.title) : item.title
   const creator = item.creator || item.author || ''
   const isLink = item.type !== 'book' && item.url && item.url !== '#'
 
@@ -146,7 +149,7 @@ function ListRow({ item, index, isBookmarked, onBookmarkToggle, onSelectBook }) 
           className="text-[13px] font-medium leading-snug transition-colors"
           style={{ color: hovered ? '#C8974A' : 'var(--th-text)' }}
         >
-          {item.title}
+          {displayTitle}
         </p>
         <p className="text-xs mt-0.5" style={{ color: 'var(--th-text-3)' }}>
           {creator}

@@ -80,6 +80,13 @@ export const translations = {
     by:                 'by',
     view_grid:          'Grid',
     view_list:          'List',
+    // Hero header
+    hero_title:         "Ember's AI Learning Library",
+    hero_desc:          'A collection of the best resources for learning AI and design — free to access and friendly to non-technical people.',
+    hero_badge_free:    'Free to access',
+    hero_badge_nontechnical: 'Non-technical friendly',
+    // ThinkingDrawer CTA
+    find_this_book:     'Find this book',
   },
   cn: {
     // Nav
@@ -158,6 +165,13 @@ export const translations = {
     by:                 '作者：',
     view_grid:          '网格',
     view_list:          '列表',
+    // Hero header
+    hero_title:         'Ember 的 AI 学习图书馆',
+    hero_desc:          '精选最优质的 AI 与设计学习资源——全部免费获取，对非技术人员友好。',
+    hero_badge_free:    '全部免费',
+    hero_badge_nontechnical: '非技术人员友好',
+    // ThinkingDrawer CTA
+    find_this_book:     '查找这本书',
   },
 }
 
