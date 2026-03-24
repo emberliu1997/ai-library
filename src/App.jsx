@@ -155,6 +155,38 @@ function App() {
         item={isDrawerOpen ? selectedItem : null}
         onClose={closeDrawer}
       />
+
+      {/* Permanent footer */}
+      <footer
+        className="lg:ml-[240px] px-4 sm:px-8 py-5 flex flex-wrap items-center justify-between gap-3"
+        style={{ borderTop: '1px solid var(--th-border-sub)' }}
+      >
+        <p className="text-xs" style={{ color: 'var(--th-text-3)' }}>
+          Curated by{' '}
+          <a
+            href="https://emberliu.substack.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'var(--th-text-2)', textDecoration: 'none' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = '#C8974A' }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--th-text-2)' }}
+          >
+            Ember Liu
+          </a>
+          {' '}· AI × Design
+        </p>
+        <a
+          href="https://emberliu.substack.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs font-medium transition-colors"
+          style={{ color: '#C8974A', textDecoration: 'none' }}
+          onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.75' }}
+          onMouseLeave={(e) => { e.currentTarget.style.opacity = '1' }}
+        >
+          Subscribe to newsletter →
+        </a>
+      </footer>
     </div>
   )
 }

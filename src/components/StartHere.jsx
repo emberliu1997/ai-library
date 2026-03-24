@@ -400,9 +400,6 @@ export function StartHere({ items, isBookmarked, onBookmarkToggle, onSelectBook 
 
       {/* Hero intro */}
       <div className="mb-12 sm:mb-16 pb-10 sm:pb-12" style={{ borderBottom: '1px solid var(--th-border-sub)' }}>
-        <p className="text-xs font-medium uppercase tracking-[0.2em] mb-3" style={{ color: '#C8974A' }}>
-          Curated by Ember Liu · AI × Design
-        </p>
         <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-4" style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-text)', maxWidth: 560 }}>
           Ember's AI Learning Library
         </h1>
@@ -419,7 +416,7 @@ export function StartHere({ items, isBookmarked, onBookmarkToggle, onSelectBook 
             Non-technical friendly
           </div>
           <a
-            href="https://emberliu.substack.com/subscribe"
+            href="https://emberliu.substack.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium transition-all"
