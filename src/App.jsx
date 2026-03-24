@@ -158,7 +158,7 @@ function App() {
 
       {/* Permanent sticky footer */}
       <footer
-        className="fixed bottom-0 right-0 left-0 lg:left-[240px] px-4 sm:px-8 py-3 flex items-center z-20"
+        className="fixed bottom-0 right-0 left-0 lg:left-[240px] px-4 sm:px-8 py-3 flex items-center justify-center z-20"
         style={{ borderTop: '1px solid var(--th-border-sub)', background: 'var(--th-surface)', backdropFilter: 'blur(12px)' }}
       >
         <p className="text-xs" style={{ color: 'var(--th-text-3)' }}>
@@ -173,7 +173,7 @@ function App() {
           >
             Ember Liu
           </a>
-          {' '}· AI × Design
+          {' '}· Last updated Mar 25, 2026
         </p>
       </footer>
     </div>
