@@ -85,6 +85,30 @@ export function ThinkingDrawer({ item, onClose }) {
               </button>
             </div>
 
+            {/* Book cover */}
+            {item.isbn && (
+              <div
+                className="relative overflow-hidden flex items-center justify-center"
+                style={{ height: 220, background: 'linear-gradient(160deg, #0a0e27 0%, #1a1208 100%)' }}
+              >
+                {/* Blurred background fill */}
+                <img
+                  src={`https://covers.openlibrary.org/b/isbn/${item.isbn}-L.jpg`}
+                  alt=""
+                  aria-hidden="true"
+                  onError={(e) => { e.target.style.display = 'none' }}
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', filter: 'blur(24px) brightness(0.35)', transform: 'scale(1.1)' }}
+                />
+                {/* Sharp cover centered */}
+                <img
+                  src={`https://covers.openlibrary.org/b/isbn/${item.isbn}-L.jpg`}
+                  alt={item.title}
+                  onError={(e) => { e.target.parentElement.style.display = 'none' }}
+                  style={{ position: 'relative', zIndex: 1, height: 168, width: 'auto', borderRadius: 6, boxShadow: '0 12px 40px rgba(0,0,0,0.7), 0 2px 8px rgba(0,0,0,0.5)' }}
+                />
+              </div>
+            )}
+
             {/* Body */}
             <div className="px-8 py-7 space-y-8">
               {/* Stage badge + Title + Author */}
