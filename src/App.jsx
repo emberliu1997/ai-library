@@ -156,10 +156,10 @@ function App() {
         onClose={closeDrawer}
       />
 
-      {/* Permanent footer */}
+      {/* Permanent sticky footer */}
       <footer
-        className="lg:ml-[240px] px-4 sm:px-8 py-5 flex flex-wrap items-center justify-between gap-3"
-        style={{ borderTop: '1px solid var(--th-border-sub)' }}
+        className="fixed bottom-0 right-0 left-0 lg:left-[240px] px-4 sm:px-8 py-3 flex items-center z-20"
+        style={{ borderTop: '1px solid var(--th-border-sub)', background: 'var(--th-surface)', backdropFilter: 'blur(12px)' }}
       >
         <p className="text-xs" style={{ color: 'var(--th-text-3)' }}>
           Curated by{' '}
@@ -175,17 +175,6 @@ function App() {
           </a>
           {' '}· AI × Design
         </p>
-        <a
-          href="https://emberliu.substack.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs font-medium transition-colors"
-          style={{ color: '#C8974A', textDecoration: 'none' }}
-          onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.75' }}
-          onMouseLeave={(e) => { e.currentTarget.style.opacity = '1' }}
-        >
-          Subscribe to newsletter →
-        </a>
       </footer>
     </div>
   )

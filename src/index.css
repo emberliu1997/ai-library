@@ -109,13 +109,13 @@
 }
 
 /* ── Mobile bottom nav spacing ───────────────────────── */
-/* Adds padding so content isn't obscured by the 56px bottom nav + iOS home indicator */
+/* Adds padding so content isn't obscured by sticky footer */
 .mobile-content-pb {
-  padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px));
+  padding-bottom: calc(44px + env(safe-area-inset-bottom, 0px));
 }
 @media (min-width: 1024px) {
   .mobile-content-pb {
-    padding-bottom: 0;
+    padding-bottom: 44px;
   }
 }
 
