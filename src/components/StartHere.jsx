@@ -415,17 +415,6 @@ export function StartHere({ items, isBookmarked, onBookmarkToggle, onSelectBook 
             <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#C8974A', display: 'inline-block' }} />
             Non-technical friendly
           </div>
-          <a
-            href="https://emberliu.substack.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium transition-all"
-            style={{ background: '#C8974A', color: '#0C0B09', textDecoration: 'none', border: '1px solid #C8974A' }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = '#b8863d' }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = '#C8974A' }}
-          >
-            Subscribe to newsletter →
-          </a>
         </div>
       </div>
 
