@@ -6,7 +6,9 @@
     "stage": "Literacy",
     "implication": "The clearest explanation of how LLMs work — no math required, just the mental model.",
     "url": "https://www.youtube.com/watch?v=zjkBMFhNj_g",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "1hr",
     "startHere": true,
     "startHereReason": "No one explains the mechanics more clearly without dumbing it down."
@@ -18,7 +20,9 @@
     "stage": "Literacy",
     "implication": "Visual, intuitive deep dive into how transformer models process language.",
     "url": "https://www.youtube.com/watch?v=wjZofJX0v4M",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "15min"
   },
   {
@@ -28,7 +32,9 @@
     "stage": "Literacy",
     "implication": "A thorough technical walkthrough of modern LLMs — for those who want to go further.",
     "url": "https://www.youtube.com/watch?v=7xTGNNLPyMI",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -39,7 +45,9 @@
     "stage": "Literacy",
     "implication": "We sense care. Making something with care is an act of gratitude to the human species.",
     "url": "https://www.youtube.com/watch?v=wLb9g_8r-mE",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "1hr"
   },
   {
@@ -50,7 +58,9 @@
     "stage": "Literacy",
     "implication": "AI-native thinking isn't a new tech stack — it's a repricing of what matters.",
     "url": "https://www.linkedin.com/pulse/what-does-ai-native-mindset-mean-yuzheng-sun-zjsyf/",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "15min",
     "startHere": true,
     "startHereReason": "Reframes AI not as a tool but as a repricing of what expertise is worth."
@@ -62,7 +72,9 @@
     "stage": "Literacy",
     "implication": "Exploring the evolution of the design role in the AI era.",
     "url": "#",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "15min"
   },
   {
@@ -72,9 +84,12 @@
     "stage": "Literacy",
     "implication": "The economic framework for AI strategy.",
     "deepThinkingBridge": "As AI makes prediction cheap, the value of human judgment skyrockets. Read this to understand why your job is shifting from 'doing' to 'deciding'.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Prediction+Machines+by+Ajay+Agrawal",
     "isbn": "9781633695672",
-    "tags": ["Mental Models", "Strategy"],
+    "tags": [
+      "Mental Models",
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -84,9 +99,11 @@
     "stage": "Literacy",
     "implication": "A primer on seeing the world as interconnected feedback loops.",
     "deepThinkingBridge": "AI products are complex systems with feedback loops, delays, and emergent behavior. Meadows gives you the mental models to see why a small change in one prompt can cascade into a completely different user experience.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Thinking+in+Systems+by+Donella+H.+Meadows",
     "isbn": "9781603580557",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -96,9 +113,11 @@
     "stage": "Literacy",
     "implication": "A brief history of humankind and the stories that bind us.",
     "deepThinkingBridge": "Harari argues that humans dominate because we believe in shared fictions—money, nations, corporations. AI is the next shared fiction. Understanding how narratives shape civilizations is essential to understanding how AI will reshape ours.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Sapiens+by+Yuval+Noah+Harari",
     "isbn": "9780062316097",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -108,9 +127,11 @@
     "stage": "Literacy",
     "implication": "Timeless lessons on wealth, greed, and happiness.",
     "deepThinkingBridge": "Housel's core insight—that behavior matters more than knowledge—is the key to AI adoption. Users don't adopt tools because they're powerful. They adopt tools that feel safe, predictable, and aligned with how they already think.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=The+Psychology+of+Money+by+Morgan+Housel",
     "isbn": "9780857197689",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -120,9 +141,11 @@
     "stage": "Literacy",
     "implication": "Tiny changes, remarkable results.",
     "deepThinkingBridge": "The best AI products work like habits—frictionless, automatic, compounding. Clear's framework of cues, cravings, responses, and rewards maps directly to how you should design AI agent triggers and workflows.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Atomic+Habits+by+James+Clear",
     "isbn": "9780735211292",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -132,9 +155,11 @@
     "stage": "Literacy",
     "implication": "Why mindset is the real constraint, not ability.",
     "deepThinkingBridge": "AI removes most execution barriers—you can build anything. The new bottleneck is imagination. Schwartz's book is about removing the self-imposed limits that now define who thrives and who doesn't in the age of AI.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=The+Magic+of+Thinking+Big+by+David+J.+Schwartz",
     "isbn": "9780671646490",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -144,9 +169,11 @@
     "stage": "Literacy",
     "implication": "A novel about the infinite lives we could have lived.",
     "deepThinkingBridge": "AI is like Nora's Midnight Library—it shows us infinite possibilities, alternative paths, generated realities. But Haig's message is that the value isn't in the infinite options; it's in the commitment to one. That's the human edge AI cannot replicate.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=The+Midnight+Library+by+Matt+Haig",
     "isbn": "9780525559474",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -156,9 +183,12 @@
     "stage": "Literacy",
     "implication": "A mission to protect what is human in a world of machines.",
     "deepThinkingBridge": "Buolamwini's work on algorithmic bias is foundational reading for anyone building AI products. You cannot design responsible AI without confronting who is—and isn't—represented in the data.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Unmasking+AI+by+Joy+Buolamwini",
     "isbn": "9780593241400",
-    "tags": ["Responsible AI", "Mental Models"],
+    "tags": [
+      "Responsible AI",
+      "Mental Models"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -168,14 +198,16 @@
     "stage": "Literacy",
     "implication": "The fundamental principles of human-centered design.",
     "deepThinkingBridge": "Before you design an AI agent, you must understand Affordances and Signifiers. If a user doesn't know how to interact with a prompt, it's a failure of these core principles.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=The+Design+of+Everyday+Things+by+Don+Norman",
     "isbn": "9780465050659",
-    "tags": ["Design Patterns", "Mental Models"],
+    "tags": [
+      "Design Patterns",
+      "Mental Models"
+    ],
     "timeCommitment": "3hr+",
     "startHere": true,
     "startHereReason": "Before you design AI behavior, you need this language: affordances, signifiers, feedback."
   },
-
   {
     "type": "podcast",
     "title": "AI prompt engineering in 2025 (with Sander Schulhoff)",
@@ -184,7 +216,9 @@
     "stage": "Craft",
     "implication": "A synthesis of 1,500+ papers on what prompting techniques actually work.",
     "url": "https://www.youtube.com/watch?v=eKuFqQKYRrA",
-    "tags": ["Prompt Design"],
+    "tags": [
+      "Prompt Design"
+    ],
     "timeCommitment": "1hr",
     "startHere": true,
     "startHereReason": "Shortcut to 1,500 papers on what prompting techniques actually work."
@@ -197,7 +231,9 @@
     "stage": "Craft",
     "implication": "Designers must move from worshipping the process to focusing on craft, intuition, and the final user experience.",
     "url": "https://www.youtube.com/watch?v=4u94juYwLLM",
-    "tags": ["Design Patterns"],
+    "tags": [
+      "Design Patterns"
+    ],
     "timeCommitment": "15min"
   },
   {
@@ -208,7 +244,9 @@
     "stage": "Craft",
     "implication": "A masterclass on curation and logic over manual craft.",
     "url": "https://www.youtube.com/watch?v=eh8bcBIAAFo",
-    "tags": ["Design Patterns"],
+    "tags": [
+      "Design Patterns"
+    ],
     "timeCommitment": "1hr"
   },
   {
@@ -219,7 +257,10 @@
     "stage": "Craft",
     "implication": "Why taste is the ultimate competitive advantage in an automated world.",
     "url": "https://www.youtube.com/watch?v=WyJV6VwEGA8",
-    "tags": ["Strategy", "Design Patterns"],
+    "tags": [
+      "Strategy",
+      "Design Patterns"
+    ],
     "timeCommitment": "1hr"
   },
   {
@@ -230,7 +271,9 @@
     "stage": "Craft",
     "implication": "Preserving craft and design thinking in an era of collapsed timelines.",
     "url": "https://www.youtube.com/watch?v=K9qdl3M5NgE",
-    "tags": ["Design Patterns"],
+    "tags": [
+      "Design Patterns"
+    ],
     "timeCommitment": "1hr"
   },
   {
@@ -240,17 +283,9 @@
     "stage": "Craft",
     "implication": "A pattern library of AI UX patterns exploring best practices for designing AI products.",
     "url": "https://www.shapeof.ai/",
-    "tags": ["Design Patterns"],
-    "timeCommitment": "15min"
-  },
-  {
-    "type": "website",
-    "title": "像素已死，系统永生：与Cursor设计负责人Ryo聊Builder时代的到来",
-    "creator": "Superlinear Academy",
-    "stage": "Craft",
-    "implication": "Figma makes static states. Real design in the AI era is live, logical, and systemic.",
-    "url": "https://www.superlinear.academy/c/ai-resources/cursor-ryo-builder",
-    "tags": ["Design Patterns"],
+    "tags": [
+      "Design Patterns"
+    ],
     "timeCommitment": "15min"
   },
   {
@@ -260,9 +295,11 @@
     "stage": "Craft",
     "implication": "The blueprint for interaction patterns.",
     "deepThinkingBridge": "AI agents are the ultimate goal-directed tools. Understanding Cooper's concepts is the only way to ensure your AI agent doesn't become a confusing 'black box'.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=About+Face+by+Alan+Cooper",
     "isbn": "9781118766576",
-    "tags": ["Design Patterns"],
+    "tags": [
+      "Design Patterns"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -272,9 +309,11 @@
     "stage": "Craft",
     "implication": "Designing the small moments that create magic.",
     "deepThinkingBridge": "The magic of AI—shimmering, streaming, thinking—lives in microinteractions. Saffer's framework is exactly how you should design these states.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Microinteractions+by+Dan+Saffer",
     "isbn": "9781491945926",
-    "tags": ["Design Patterns"],
+    "tags": [
+      "Design Patterns"
+    ],
     "timeCommitment": "3hr+",
     "startHere": true,
     "startHereReason": "AI's magic lives in small moments — this gives you the framework to design them."
@@ -286,9 +325,11 @@
     "stage": "Craft",
     "implication": "A data visualization guide for business professionals.",
     "deepThinkingBridge": "AI can generate a chart in seconds. But can it tell the right story with that chart? Knaflic's framework—context, visual, narrative—is exactly how you should be prompting AI to produce data visualizations that actually communicate.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Storytelling+With+Data+by+Cole+Nussbaumer+Knaflic",
     "isbn": "9781119002253",
-    "tags": ["Design Patterns"],
+    "tags": [
+      "Design Patterns"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -298,9 +339,11 @@
     "stage": "Craft",
     "implication": "Clarify your message so customers will listen.",
     "deepThinkingBridge": "Miller's framework—your customer is the hero, your brand is the guide—is the template for every AI product's narrative. The AI isn't the hero. The user is. Your product is Yoda, not Luke.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Building+a+StoryBrand+by+Donald+Miller",
     "isbn": "9780718033323",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -310,9 +353,11 @@
     "stage": "Craft",
     "implication": "How storytelling can captivate customers and transform your business.",
     "deepThinkingBridge": "AI-generated content is everywhere now. The stories that stick are the ones with a human signature—a specific moment, an emotional truth. Hall's four-story framework is your playbook for creating content AI can't replicate.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Stories+That+Stick+by+Kindra+Hall",
     "isbn": "9781400211869",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -322,9 +367,11 @@
     "stage": "Craft",
     "implication": "Inside the demo-driven culture of Apple.",
     "deepThinkingBridge": "AI development is 'vibes-based' and demo-driven. Kocienda explains how high-fidelity demos are the only way to build software that feels 'right'.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Creative+Selection+by+Ken+Kocienda",
     "isbn": "9781250194466",
-    "tags": ["Design Patterns"],
+    "tags": [
+      "Design Patterns"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -334,9 +381,11 @@
     "stage": "Craft",
     "implication": "Updated for the next generation of leaders.",
     "deepThinkingBridge": "The irony of AI is that as machines get better at talking, the humans who can genuinely connect become irreplaceable. Carnegie's principles aren't about manipulation—they're about the empathy that AI will never fully replicate.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=How+to+Win+Friends+and+Influence+People+by+Dale+Carnegie",
     "isbn": "9780671027032",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -346,9 +395,11 @@
     "stage": "Craft",
     "implication": "The psychology of persuasion.",
     "deepThinkingBridge": "Every AI interface is a persuasion engine—social proof in recommendations, scarcity in token limits, authority in 'Claude says.' Cialdini's six principles are already baked into every AI product. Read this to see them.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Influence+by+Robert+B.+Cialdini",
     "isbn": "9780061241895",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -358,9 +409,11 @@
     "stage": "Craft",
     "implication": "Negotiating as if your life depended on it.",
     "deepThinkingBridge": "Voss's techniques—labeling emotions, tactical empathy, calibrated questions—are exactly what you should be designing into AI agent conversations. The best AI agents don't just answer; they negotiate, mirror, and de-escalate.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Never+Split+the+Difference+by+Chris+Voss",
     "isbn": "9780062407801",
-    "tags": ["Prompt Design"],
+    "tags": [
+      "Prompt Design"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -370,12 +423,13 @@
     "stage": "Craft",
     "implication": "How to build a well-lived, joyful life using design thinking.",
     "deepThinkingBridge": "Burnett's 'prototype your life' approach is pure design thinking applied to the self. In the AI era, your career is no longer a ladder—it's a design problem. Iterate, test, pivot. The same way you'd build a product.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Designing+Your+Life+by+Bill+Burnett",
     "isbn": "9781101875322",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "3hr+"
   },
-
   {
     "type": "podcast",
     "title": "Why AI evals are the hottest new skill in AI (with Hamel Husain & Shreya Shankar)",
@@ -384,7 +438,9 @@
     "stage": "Judgment",
     "implication": "How to go from 'it feels right' to 'here's how we measure it.'",
     "url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
-    "tags": ["Evals"],
+    "tags": [
+      "Evals"
+    ],
     "timeCommitment": "1hr",
     "startHere": true,
     "startHereReason": "The shift from 'feels right' to 'here's how we measure it.'"
@@ -397,7 +453,9 @@
     "stage": "Judgment",
     "implication": "Tactical patterns for building interfaces that feel alive.",
     "url": "https://www.youtube.com/watch?v=PEDzBT-jNmI",
-    "tags": ["Design Patterns"],
+    "tags": [
+      "Design Patterns"
+    ],
     "timeCommitment": "1hr"
   },
   {
@@ -408,7 +466,9 @@
     "stage": "Judgment",
     "implication": "How generative AI is blurring the line between designers and developers.",
     "url": "https://www.youtube.com/watch?v=sXtnBpWO194",
-    "tags": ["Design Patterns"],
+    "tags": [
+      "Design Patterns"
+    ],
     "timeCommitment": "1hr"
   },
   {
@@ -419,7 +479,10 @@
     "stage": "Judgment",
     "implication": "What separates AI products people love from ones they forget.",
     "url": "https://www.youtube.com/watch?v=IcbuTTVUY7M",
-    "tags": ["Strategy", "Design Patterns"],
+    "tags": [
+      "Strategy",
+      "Design Patterns"
+    ],
     "timeCommitment": "1hr"
   },
   {
@@ -429,7 +492,10 @@
     "stage": "Judgment",
     "implication": "A toolkit for teams building human-centered AI products.",
     "url": "https://pair.withgoogle.com/guidebook/",
-    "tags": ["Design Patterns", "Responsible AI"],
+    "tags": [
+      "Design Patterns",
+      "Responsible AI"
+    ],
     "timeCommitment": "15min"
   },
   {
@@ -439,7 +505,9 @@
     "stage": "Judgment",
     "implication": "Patterns, principles, and case studies for AI interface design.",
     "url": "https://uxofai.com/",
-    "tags": ["Design Patterns"],
+    "tags": [
+      "Design Patterns"
+    ],
     "timeCommitment": "15min"
   },
   {
@@ -449,7 +517,10 @@
     "stage": "Judgment",
     "implication": "Collaborative tools to help you create more effective and responsible human-AI experiences.",
     "url": "https://www.microsoft.com/en-us/haxtoolkit/",
-    "tags": ["Design Patterns", "Responsible AI"],
+    "tags": [
+      "Design Patterns",
+      "Responsible AI"
+    ],
     "timeCommitment": "15min"
   },
   {
@@ -459,7 +530,9 @@
     "stage": "Judgment",
     "implication": "28 comprehensive AI design patterns with real examples from ChatGPT, Claude, and Midjourney.",
     "url": "https://www.aiuxdesign.guide/",
-    "tags": ["Design Patterns"],
+    "tags": [
+      "Design Patterns"
+    ],
     "timeCommitment": "15min"
   },
   {
@@ -470,7 +543,9 @@
     "stage": "Judgment",
     "implication": "In 2025, 'taste' became the term everyone in product uses. Here's what it actually means.",
     "url": "https://medium.com/@yanliuharvard/no-46-everyone-talks-about-taste-what-is-it-why-it-matters-12447a81cab9",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "15min"
   },
   {
@@ -480,9 +555,11 @@
     "stage": "Judgment",
     "implication": "Be a kick-ass boss without losing your humanity.",
     "deepThinkingBridge": "Scott's 2x2 of Care Personally × Challenge Directly is the framework for AI feedback design. The best AI assistants are radically candid—they care about the user's goal AND challenge their approach when needed.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Radical+Candor+by+Kim+Scott",
     "isbn": "9781250103505",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -492,9 +569,11 @@
     "stage": "Judgment",
     "implication": "Medicine and what matters in the end.",
     "deepThinkingBridge": "Gawande's central argument—that medicine should serve what patients value, not what doctors can do—is the exact reframe needed for AI. Technology should serve what users need, not what the model can generate.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Being+Mortal+by+Atul+Gawande",
     "isbn": "9780805095159",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -504,9 +583,12 @@
     "stage": "Judgment",
     "implication": "A transformative quest for wealth, wisdom, and enlightenment.",
     "deepThinkingBridge": "Spier's insight—that your environment shapes your decisions more than your analysis—is directly applicable to AI-assisted decision making. The best AI copilot means nothing if you haven't designed the right decision environment around it.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=The+Education+of+a+Value+Investor+by+Guy+Spier",
     "isbn": "9781137278593",
-    "tags": ["Mental Models", "Strategy"],
+    "tags": [
+      "Mental Models",
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -516,9 +598,11 @@
     "stage": "Judgment",
     "implication": "A masterclass in strategy, leverage, and human nature.",
     "deepThinkingBridge": "Law 28: 'Enter action with boldness.' In the AI era, the cautious companies that wait for perfect models get disrupted by the bold ones who ship, learn, and iterate. Greene's laws map eerily well to the dynamics of the AI race.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=The+48+Laws+of+Power+by+Robert+Greene",
     "isbn": "9780140280197",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -528,9 +612,11 @@
     "stage": "Judgment",
     "implication": "How great leaders inspire everyone to take action.",
     "deepThinkingBridge": "Most AI products lead with features—'we use GPT-4!' Sinek's golden circle explains why the winning AI products lead with purpose. Users don't buy what you build. They buy why you built it.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Start+With+Why+by+Simon+Sinek",
     "isbn": "9781591846444",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -540,9 +626,11 @@
     "stage": "Judgment",
     "implication": "Brave work, tough conversations, whole hearts.",
     "deepThinkingBridge": "Brown's concept of 'rumbling with vulnerability' is what separates great AI product teams from good ones. Building AI means shipping uncertainty, admitting what you don't know, and leading through ambiguity.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Dare+to+Lead+by+Bren%C3%A9+Brown",
     "isbn": "9780399592522",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -552,9 +640,11 @@
     "stage": "Judgment",
     "implication": "Facing adversity, building resilience, and finding joy.",
     "deepThinkingBridge": "Every AI product team faces the moment when the model breaks, the demo fails, the strategy shifts overnight. Sandberg's framework for resilience—acknowledge, adapt, accelerate—is essential for surviving the volatility of building with AI.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Option+B+by+Sheryl+Sandberg",
     "isbn": "9781524732684",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -564,12 +654,13 @@
     "stage": "Judgment",
     "implication": "The four types of human behavior and how to communicate with each.",
     "deepThinkingBridge": "AI personalization is still crude. Erikson's DISC framework—Red, Yellow, Green, Blue—is a simple mental model for designing AI interfaces that adapt their tone and interaction style to different user types.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Surrounded+by+Idiots+by+Thomas+Erikson",
     "isbn": "9781250179784",
-    "tags": ["Mental Models"],
+    "tags": [
+      "Mental Models"
+    ],
     "timeCommitment": "3hr+"
   },
-
   {
     "type": "video",
     "title": "The Rise of AI Agents (Andrew Ng, BUILD 2024)",
@@ -578,7 +669,9 @@
     "stage": "Systems Thinking",
     "implication": "Why agentic patterns matter more than model upgrades — and how to design for them.",
     "url": "https://www.youtube.com/watch?v=KrRD7r7y7NY",
-    "tags": ["Agents"],
+    "tags": [
+      "Agents"
+    ],
     "timeCommitment": "1hr",
     "startHere": true,
     "startHereReason": "Clearest orientation to agentic patterns and why they matter more than model upgrades."
@@ -591,7 +684,10 @@
     "stage": "Systems Thinking",
     "implication": "Navigating high-velocity AI shipping cycles.",
     "url": "https://www.youtube.com/watch?v=jmHBMtpR36M",
-    "tags": ["Agents", "Strategy"],
+    "tags": [
+      "Agents",
+      "Strategy"
+    ],
     "timeCommitment": "15min"
   },
   {
@@ -602,7 +698,10 @@
     "stage": "Systems Thinking",
     "implication": "What happens when you rebuild a beloved product from the ground up around AI.",
     "url": "https://www.youtube.com/watch?v=o4scJaQgnFA",
-    "tags": ["Agents", "Strategy"],
+    "tags": [
+      "Agents",
+      "Strategy"
+    ],
     "timeCommitment": "15min"
   },
   {
@@ -613,7 +712,10 @@
     "stage": "Systems Thinking",
     "implication": "What it takes to build and ship the world's most used AI product.",
     "url": "https://www.youtube.com/watch?v=ixY2PvQJ0To",
-    "tags": ["Strategy", "Agents"],
+    "tags": [
+      "Strategy",
+      "Agents"
+    ],
     "timeCommitment": "1hr"
   },
   {
@@ -624,7 +726,9 @@
     "stage": "Systems Thinking",
     "implication": "A 3-hour conversation on AI agents, human-system boundaries, and the future world.",
     "url": "https://www.youtube.com/watch?v=gQgKkUsx5q0",
-    "tags": ["Agents"],
+    "tags": [
+      "Agents"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -634,9 +738,11 @@
     "stage": "Systems Thinking",
     "implication": "How to create tech products customers love.",
     "deepThinkingBridge": "Cagan's distinction between 'feature teams' and 'empowered product teams' is the defining question for AI companies. Are you shipping features because the model can do them, or solving problems because users need them?",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Inspired+by+Marty+Cagan",
     "isbn": "9781119387503",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -646,9 +752,12 @@
     "stage": "Systems Thinking",
     "implication": "What to do when everyone looks to you.",
     "deepThinkingBridge": "Zhuo's insight that a manager's job is to get better outcomes from a group applies directly to managing AI agents. The emerging role of 'AI manager'—someone who orchestrates agents instead of people—needs exactly this playbook.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=The+Making+of+a+Manager+by+Julie+Zhuo",
     "isbn": "9780735219564",
-    "tags": ["Strategy", "Agents"],
+    "tags": [
+      "Strategy",
+      "Agents"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -658,9 +767,11 @@
     "stage": "Systems Thinking",
     "implication": "Proven strategies for getting up to speed faster and smarter.",
     "deepThinkingBridge": "Every AI product launch is a '90 days' moment—new territory, uncertain stakeholders, compressed timelines. Watkins' framework for diagnosing situations, building credibility, and securing early wins maps perfectly to shipping AI at velocity.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=The+First+90+Days+by+Michael+Watkins",
     "isbn": "9781422188613",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -670,9 +781,12 @@
     "stage": "Systems Thinking",
     "implication": "Get sh*t done, fast and fair.",
     "deepThinkingBridge": "Scott argues that workplace injustice is a bug, not a feature—and the same applies to AI systems. Building fair AI products requires the same intentional design against bias that building fair teams does.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Just+Work+by+Kim+Scott",
     "isbn": "9781250179937",
-    "tags": ["Responsible AI", "Strategy"],
+    "tags": [
+      "Responsible AI",
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -682,9 +796,11 @@
     "stage": "Systems Thinking",
     "implication": "Why some teams pull together and others don't.",
     "deepThinkingBridge": "Sinek's 'Circle of Safety' concept explains why the best AI teams ship faster—psychological safety lets people experiment, fail, and learn. In AI, where every week brings a new paradigm, teams that can't fail fast die slow.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Leaders+Eat+Last+by+Simon+Sinek",
     "isbn": "9781591848016",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -694,9 +810,11 @@
     "stage": "Systems Thinking",
     "implication": "Lessons learned from 15 years as CEO of The Walt Disney Company.",
     "deepThinkingBridge": "Iger's three priorities—innovation, technology, global expansion—mirror exactly what every AI company is navigating. His playbook for acquiring Pixar, Marvel, and Lucasfilm is a masterclass in bold, technology-driven reinvention.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=The+Ride+of+a+Lifetime+by+Robert+Iger",
     "isbn": "9780399592096",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -706,9 +824,11 @@
     "stage": "Systems Thinking",
     "implication": "Master the art of business strategy.",
     "deepThinkingBridge": "In AI, everyone is playing chess at 10x speed. Bet-David's 'think five moves ahead' framework is the antidote to the reactive, hype-driven decision-making that kills most AI startups before they find product-market fit.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Your+Next+Five+Moves+by+Patrick+Bet-David",
     "isbn": "9781982154813",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -718,9 +838,11 @@
     "stage": "Systems Thinking",
     "implication": "The only way to guarantee your fair share of market returns.",
     "deepThinkingBridge": "Bogle's thesis—that simplicity beats complexity over time—is the contrarian insight in AI product design. While everyone races to add features, the winning products will be the simplest ones that compound user trust over years.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=The+Little+Book+of+Common+Sense+Investing+by+John+C.+Bogle",
     "isbn": "9781119404507",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -730,9 +852,11 @@
     "stage": "Systems Thinking",
     "implication": "Women, work, and the will to lead.",
     "deepThinkingBridge": "AI is reshaping who gets a seat at the table and how influence is earned. Sandberg's core message—that systemic change starts with individual action—is more relevant than ever as AI redefines workplace dynamics.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=Lean+In+by+Sheryl+Sandberg",
     "isbn": "9780385349949",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   },
   {
@@ -742,9 +866,11 @@
     "stage": "Systems Thinking",
     "implication": "The politics of presidential mercy.",
     "deepThinkingBridge": "Power, accountability, and the systems that check them. As AI concentrates unprecedented power in fewer hands, understanding how authority is granted—and revoked—becomes essential context for the governance debates ahead.",
-    "url": "#",
+    "url": "https://www.google.com/search?q=The+Pardon+by+Jeffrey+Toobin",
     "isbn": "9781668021521",
-    "tags": ["Strategy"],
+    "tags": [
+      "Strategy"
+    ],
     "timeCommitment": "3hr+"
   }
 ]

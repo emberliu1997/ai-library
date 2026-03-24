@@ -22,7 +22,7 @@ function extractVideoId(url) {
 }
 
 const TYPE_CONFIG = {
-  book:    { label: 'Book',    Icon: null,       isLink: false },
+  book:    { label: 'Book',    Icon: null,       isLink: true  },
   video:   { label: 'Video',   Icon: Play,       isLink: true  },
   podcast: { label: 'Podcast', Icon: Headphones, isLink: true  },
   article: { label: 'Article', Icon: FileText,   isLink: true  },
