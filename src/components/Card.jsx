@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Bookmark, Play, Headphones, FileText, Globe } from 'lucide-react'
+import { Play, Headphones, FileText, Globe } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 
 const BOOK_PALETTES = [
@@ -38,11 +38,10 @@ const ASPECT = {
   website: null,
 }
 
-export function Card({ item, isBookmarked, onBookmarkToggle, onSelect, index = 0 }) {
+export function Card({ item, onSelect, index = 0 }) {
   const { lang, t } = useLanguage()
   const isCN = lang === 'cn'
   const cfg = TYPE_CONFIG[item.type] || TYPE_CONFIG.article
-  const bookmarked = isBookmarked(item.title)
   const videoId = (item.type === 'video' || item.type === 'podcast') ? extractVideoId(item.url) : null
   const thumbnail = videoId ? `https://img.youtube.com/vi/${videoId}/mqdefault.jpg` : null
   const coverUrl = item.isbn ? `https://covers.openlibrary.org/b/isbn/${item.isbn}-L.jpg` : null
@@ -53,7 +52,7 @@ export function Card({ item, isBookmarked, onBookmarkToggle, onSelect, index = 0
   const hasImage = ASPECT[item.type] !== null
 
   // For books: use a button. For links: use an anchor.
-  const isExternalLink = cfg.isLink && item.url && item.url !== '#'
+  const isExternalLink = item.type !== 'book' && cfg.isLink && item.url && item.url !== '#'
 
   function ImageArea() {
     const imageContent = (

@@ -1,11 +1,9 @@
 import { Card } from './Card'
 
-function cardProps(item, i, isBookmarked, onBookmarkToggle, onSelectBook) {
+function cardProps(item, i, onSelectBook) {
   return {
     item,
     index: i,
-    isBookmarked,
-    onBookmarkToggle,
     onSelect: onSelectBook,
   }
 }
@@ -26,52 +24,41 @@ function EmptyState() {
   )
 }
 
-/**
- * Video / Podcast — uniform equal-width grid
- * All cards share the same width and 16:9 aspect ratio → consistent height.
- * The SpotlightCard in GoDeeper already serves as the featured hero above.
- */
-function VideoGrid({ items, isBookmarked, onBookmarkToggle, onSelectBook }) {
+function VideoGrid({ items, onSelectBook }) {
   if (items.length === 0) return null
   return (
     <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
       {items.map((item, i) => (
-        <Card key={item.title} {...cardProps(item, i, isBookmarked, onBookmarkToggle, onSelectBook)} />
+        <Card key={item.title} {...cardProps(item, i, onSelectBook)} />
       ))}
     </div>
   )
 }
 
-/**
- * Books — tight portrait bookshelf grid
- */
-function BookshelfGrid({ items, isBookmarked, onBookmarkToggle, onSelectBook }) {
+function BookshelfGrid({ items, onSelectBook }) {
   return (
     <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2.5">
       {items.map((item, i) => (
-        <Card key={item.title} {...cardProps(item, i, isBookmarked, onBookmarkToggle, onSelectBook)} />
+        <Card key={item.title} {...cardProps(item, i, onSelectBook)} />
       ))}
     </div>
   )
 }
 
-/**
- * Articles / Websites — text-forward 3-column grid
- */
-function TextGrid({ items, isBookmarked, onBookmarkToggle, onSelectBook }) {
+function TextGrid({ items, onSelectBook }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {items.map((item, i) => (
-        <Card key={item.title} {...cardProps(item, i, isBookmarked, onBookmarkToggle, onSelectBook)} />
+        <Card key={item.title} {...cardProps(item, i, onSelectBook)} />
       ))}
     </div>
   )
 }
 
-export function MasonryGrid({ items, isBookmarked, onBookmarkToggle, onSelectBook, type }) {
+export function MasonryGrid({ items, onSelectBook, type }) {
   if (!items.length) return <EmptyState />
 
-  const props = { items, isBookmarked, onBookmarkToggle, onSelectBook }
+  const props = { items, onSelectBook }
 
   if (type === 'video' || type === 'podcast') return <VideoGrid {...props} />
   if (type === 'book') return <BookshelfGrid {...props} />
