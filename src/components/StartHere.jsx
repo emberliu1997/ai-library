@@ -397,6 +397,41 @@ export function StartHere({ items, isBookmarked, onBookmarkToggle, onSelectBook 
 
   return (
     <div className="px-4 sm:px-8 pt-8 sm:pt-10 pb-20">
+
+      {/* Hero intro */}
+      <div className="mb-12 sm:mb-16 pb-10 sm:pb-12" style={{ borderBottom: '1px solid var(--th-border-sub)' }}>
+        <p className="text-xs font-medium uppercase tracking-[0.2em] mb-3" style={{ color: '#C8974A' }}>
+          Curated by Ember Liu · AI × Design
+        </p>
+        <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight mb-4" style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-text)', maxWidth: 560 }}>
+          Ember's AI Learning Library
+        </h1>
+        <p className="text-sm leading-relaxed mb-6" style={{ color: 'var(--th-text-2)', maxWidth: 480, lineHeight: 1.8 }}>
+          A collection of the best resources for learning AI and design — free to access and friendly to non-technical people.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs" style={{ background: 'rgba(200,151,74,0.07)', border: '1px solid rgba(200,151,74,0.15)', color: 'var(--th-text-2)' }}>
+            <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#C8974A', display: 'inline-block' }} />
+            Free to access
+          </div>
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs" style={{ background: 'rgba(200,151,74,0.07)', border: '1px solid rgba(200,151,74,0.15)', color: 'var(--th-text-2)' }}>
+            <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#C8974A', display: 'inline-block' }} />
+            Non-technical friendly
+          </div>
+          <a
+            href="https://emberliu.substack.com/subscribe"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium transition-all"
+            style={{ background: '#C8974A', color: '#0C0B09', textDecoration: 'none', border: '1px solid #C8974A' }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = '#b8863d' }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = '#C8974A' }}
+          >
+            Subscribe to newsletter →
+          </a>
+        </div>
+      </div>
+
       {/* Header */}
       <div className="mb-10 sm:mb-12">
         <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: '#C8974A', letterSpacing: '0.18em' }}>

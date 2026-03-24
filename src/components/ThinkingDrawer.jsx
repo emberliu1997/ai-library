@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { X } from 'lucide-react'
+import { X, ExternalLink } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 
 export function ThinkingDrawer({ item, onClose }) {
@@ -129,6 +129,22 @@ export function ThinkingDrawer({ item, onClose }) {
                     {item.deepThinkingBridge}
                   </p>
                 </div>
+              )}
+
+              {/* CTA — search book on Google */}
+              {item.type === 'book' && (item.author || item.creator) && (
+                <a
+                  href={`https://www.google.com/search?q=${encodeURIComponent(`${item.title} by ${item.author || item.creator}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full rounded-xl text-sm font-medium transition-colors"
+                  style={{ padding: '12px 16px', background: 'rgba(200,151,74,0.1)', border: '1px solid rgba(200,151,74,0.25)', color: '#C8974A', textDecoration: 'none' }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(200,151,74,0.18)' }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(200,151,74,0.1)' }}
+                >
+                  <ExternalLink className="w-3.5 h-3.5" />
+                  Find this book
+                </a>
               )}
 
               <div style={{ height: 32 }} />
