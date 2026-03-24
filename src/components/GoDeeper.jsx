@@ -153,7 +153,7 @@ export function GoDeeper({
         <h1 className="text-4xl leading-tight mb-2" style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-text)' }}>
           {activeStage ? (
             <>
-              <span style={{ color: 'var(--th-border-sub)' }}>{STAGE_META[activeStage].number}.</span>
+              <span style={{ color: 'var(--th-text-3)' }}>{STAGE_META[activeStage].number}.</span>
               {' '}{t(`stage_${activeStage.replace(/\s+/g, '_')}`)}
             </>
           ) : t('go_deeper_h1_all')}
@@ -204,7 +204,7 @@ export function GoDeeper({
                   <div className="flex items-baseline gap-3 mb-2">
                     <span
                       className="text-5xl"
-                      style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-border-sub)', lineHeight: 1 }}
+                      style={{ fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic', color: 'var(--th-text-3)', lineHeight: 1 }}
                     >
                       {meta.number}
                     </span>
