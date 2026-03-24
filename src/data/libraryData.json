@@ -78,20 +78,6 @@
     "startHereReason_cn": "当 AI 能执行一切时，问题就变成了：你知道什么值得做吗？"
   },
   {
-    "type": "article",
-    "title": "Human 3.0 & AI response to help designers grow",
-    "creator": "Various",
-    "stage": "Literacy",
-    "implication": "Exploring the evolution of the design role in the AI era.",
-    "url": "#",
-    "tags": [
-      "Mental Models"
-    ],
-    "timeCommitment": "15min",
-    "title_cn": "Human 3.0 与 AI 助力设计师成长",
-    "implication_cn": "探索 AI 时代设计角色的演变。"
-  },
-  {
     "type": "book",
     "title": "Prediction Machines",
     "author": "Ajay Agrawal",
