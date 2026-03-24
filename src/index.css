@@ -52,7 +52,7 @@
   --th-border-sub:   #EAE5DF;
   --th-text:         #1A1714;
   --th-text-2:       #5C5550;
-  --th-text-3:       #7A7268;
+  --th-text-3:       #6B6560;   /* was #7A7268 (4.2:1 — failed AA normal text); now 5.1:1 */
   --th-sidebar:      #FFFFFF;
   --th-sidebar-b:    #DDD8D0;
   --th-filter-bar:   rgba(244,241,236,0.95);
@@ -104,8 +104,10 @@
   ::-webkit-scrollbar-thumb { background: #2A2723; border-radius: 2px; }
   ::-webkit-scrollbar-thumb:hover { background: #3D3A35; }
 
-  /* Selection */
-  ::selection { background: rgba(200, 151, 74, 0.25); color: #EDE5D8; }
+  /* Selection — dark mode: amber bg + light text (6.7:1) */
+  ::selection { background: rgba(200, 151, 74, 0.45); color: #EDE5D8; }
+  /* Selection — light mode: amber bg + dark text (10.3:1) */
+  .theme-light ::selection { background: rgba(200, 151, 74, 0.55); color: #1A1714; }
 }
 
 /* ── Mobile bottom nav spacing ───────────────────────── */
