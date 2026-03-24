@@ -107,47 +107,47 @@ function ThumbnailPreview({ item, y }) {
           </div>
         </>
       ) : (
-        /* Text-based preview (articles, websites) */
-        <div
-          style={{
-            position: 'relative',
-            aspectRatio: '4/3',
-            overflow: 'hidden',
-            background: 'linear-gradient(135deg, #0D0E18 0%, #0A120A 50%, #0E0D0B 100%)',
-          }}
-        >
-          {/* Decorative glow */}
-          <div style={{
-            position: 'absolute', inset: 0,
-            background: `radial-gradient(ellipse at 20% 60%, ${typeColor}18 0%, transparent 60%), radial-gradient(ellipse at 80% 10%, ${typeColor}0d 0%, transparent 50%)`,
-          }} />
-          {/* Large decorative quote mark */}
-          <div style={{
-            position: 'absolute', right: 10, top: 4, fontSize: 88, lineHeight: 1,
-            fontFamily: 'Instrument Serif, Georgia, serif',
-            color: `${typeColor}0a`, pointerEvents: 'none', userSelect: 'none',
-          }}>"</div>
-          {/* Content */}
-          <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '13px 14px 14px' }}>
+        /* Screenshot-based preview (articles, websites) */
+        <>
+          <div
+            style={{
+              position: 'relative',
+              aspectRatio: '16/9',
+              overflow: 'hidden',
+              background: `linear-gradient(160deg, ${palette.from} 0%, ${palette.to} 100%)`,
+            }}
+          >
+            {item.url && item.url !== '#' && (
+              <img
+                src={`https://image.thum.io/get/width/440/crop/248/noanimate/${item.url}`}
+                alt={item.title}
+                onError={(e) => { e.target.style.display = 'none' }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
+              />
+            )}
+            <div style={{
+              position: 'absolute', inset: 0,
+              background: 'linear-gradient(to top, rgba(8,7,6,0.75) 0%, transparent 55%)',
+            }} />
             <span style={{
-              display: 'inline-block', fontSize: 9, fontWeight: 600, letterSpacing: '0.14em',
+              position: 'absolute', top: 10, left: 10,
+              fontSize: 9, fontWeight: 600, letterSpacing: '0.14em',
               textTransform: 'uppercase', color: typeColor,
+              background: 'rgba(0,0,0,0.55)', backdropFilter: 'blur(6px)',
+              padding: '3px 7px', borderRadius: 4,
             }}>
               {typeLabel}
             </span>
-            <div>
-              <p style={{
-                fontFamily: 'Instrument Serif, Georgia, serif', fontStyle: 'italic',
-                fontSize: 13, color: '#EDE5D8', lineHeight: 1.4, marginBottom: 5,
-              }}>
-                {item.title}
-              </p>
-              {creator && (
-                <p style={{ fontSize: 10, color: `${typeColor}80`, lineHeight: 1.3 }}>{creator}</p>
-              )}
-            </div>
           </div>
-        </div>
+          <div style={{ padding: '10px 13px 12px' }}>
+            <p style={{ fontSize: 12, fontWeight: 500, color: '#EDE5D8', lineHeight: 1.4, marginBottom: 3 }}>
+              {item.title}
+            </p>
+            {creator && (
+              <p style={{ fontSize: 11, color: '#817D78', lineHeight: 1.3 }}>{creator}</p>
+            )}
+          </div>
+        </>
       )}
     </motion.div>
   )
