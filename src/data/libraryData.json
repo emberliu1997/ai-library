@@ -1004,22 +1004,6 @@
   },
   {
     "type": "newsletter",
-    "title": "Simon Willison's Weblog",
-    "creator": "Simon Willison",
-    "show": "Newsletter",
-    "stage": "Craft",
-    "url": "https://simonwillison.net",
-    "implication": "Daily dispatches from someone who actually builds with LLMs. Best practical signal in AI.",
-    "implication_cn": "真正用 LLM 构建产品的人的每日实战记录。AI 领域最实用的信号源。",
-    "title_cn": "Simon Willison 的博客",
-    "tags": [
-      "Agents",
-      "Prompt Design"
-    ],
-    "timeCommitment": "15min"
-  },
-  {
-    "type": "newsletter",
     "title": "Lenny's Newsletter",
     "creator": "Lenny Rachitsky",
     "show": "Newsletter",
@@ -1046,37 +1030,6 @@
     "title_cn": "TLDR AI",
     "tags": [],
     "timeCommitment": "15min"
-  },
-  {
-    "type": "newsletter",
-    "title": "Interconnects",
-    "creator": "Nathan Lambert",
-    "show": "Newsletter",
-    "stage": "Literacy",
-    "url": "https://www.interconnects.ai",
-    "implication": "The clearest writing on how AI models are actually trained and evaluated.",
-    "implication_cn": "关于 AI 模型训练与评估的最清晰写作。",
-    "title_cn": "Interconnects",
-    "tags": [
-      "Evals"
-    ],
-    "timeCommitment": "1hr"
-  },
-  {
-    "type": "newsletter",
-    "title": "Latent Space",
-    "creator": "swyx & Alessio",
-    "show": "Newsletter",
-    "stage": "Systems Thinking",
-    "url": "https://www.latent.space",
-    "implication": "Technical but accessible. Covers what's actually happening at the AI frontier.",
-    "implication_cn": "技术深度与可读性兼具。追踪 AI 前沿真正发生的事。",
-    "title_cn": "Latent Space",
-    "tags": [
-      "Agents",
-      "Strategy"
-    ],
-    "timeCommitment": "1hr"
   },
   {
     "type": "newsletter",
@@ -1120,6 +1073,22 @@
     "tags": [
       "Design Patterns",
       "Mental Models"
+    ],
+    "timeCommitment": "15min"
+  },
+  {
+    "type": "newsletter",
+    "title": "Dan Koe's Newsletter",
+    "creator": "Dan Koe",
+    "show": "Newsletter",
+    "stage": "Judgement",
+    "url": "https://thedankoe.com/blog/",
+    "implication": "On building a meaningful creative business — ideas, writing, and the philosophy of independent work.",
+    "implication_cn": "关于创造有意义的创意事业——想法、写作与独立工作的哲学。",
+    "title_cn": "Dan Koe 的新闻通讯",
+    "tags": [
+      "Mental Models",
+      "Strategy"
     ],
     "timeCommitment": "15min"
   }
