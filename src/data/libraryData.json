@@ -148,54 +148,6 @@
   },
   {
     "type": "book",
-    "title": "Atomic Habits",
-    "author": "James Clear",
-    "stage": "Literacy",
-    "implication": "Tiny changes, remarkable results.",
-    "deepThinkingBridge": "The best AI products work like habits—frictionless, automatic, compounding. Clear's framework of cues, cravings, responses, and rewards maps directly to how you should design AI agent triggers and workflows.",
-    "url": "https://www.google.com/search?q=Atomic+Habits+by+James+Clear",
-    "isbn": "9780735211292",
-    "tags": [
-      "Mental Models"
-    ],
-    "timeCommitment": "3hr+",
-    "title_cn": "原子习惯",
-    "implication_cn": "微小改变，非凡成果。"
-  },
-  {
-    "type": "book",
-    "title": "The Magic of Thinking Big",
-    "author": "David J. Schwartz",
-    "stage": "Literacy",
-    "implication": "Why mindset is the real constraint, not ability.",
-    "deepThinkingBridge": "AI removes most execution barriers—you can build anything. The new bottleneck is imagination. Schwartz's book is about removing the self-imposed limits that now define who thrives and who doesn't in the age of AI.",
-    "url": "https://www.google.com/search?q=The+Magic+of+Thinking+Big+by+David+J.+Schwartz",
-    "isbn": "9781607380696",
-    "tags": [
-      "Mental Models"
-    ],
-    "timeCommitment": "3hr+",
-    "title_cn": "思考致富",
-    "implication_cn": "为什么思维方式才是真正的约束，而非能力。"
-  },
-  {
-    "type": "book",
-    "title": "The Midnight Library",
-    "author": "Matt Haig",
-    "stage": "Literacy",
-    "implication": "A novel about the infinite lives we could have lived.",
-    "deepThinkingBridge": "AI is like Nora's Midnight Library—it shows us infinite possibilities, alternative paths, generated realities. But Haig's message is that the value isn't in the infinite options; it's in the commitment to one. That's the human edge AI cannot replicate.",
-    "url": "https://www.google.com/search?q=The+Midnight+Library+by+Matt+Haig",
-    "isbn": "9780525559474",
-    "tags": [
-      "Mental Models"
-    ],
-    "timeCommitment": "3hr+",
-    "title_cn": "午夜图书馆",
-    "implication_cn": "一部关于我们本可拥有的无数种人生的小说。"
-  },
-  {
-    "type": "book",
     "title": "Unmasking AI",
     "author": "Joy Buolamwini",
     "stage": "Literacy",
@@ -463,22 +415,6 @@
   },
   {
     "type": "book",
-    "title": "Never Split the Difference",
-    "author": "Chris Voss",
-    "stage": "Craft",
-    "implication": "Negotiating as if your life depended on it.",
-    "deepThinkingBridge": "Voss's techniques—labeling emotions, tactical empathy, calibrated questions—are exactly what you should be designing into AI agent conversations. The best AI agents don't just answer; they negotiate, mirror, and de-escalate.",
-    "url": "https://www.google.com/search?q=Never+Split+the+Difference+by+Chris+Voss",
-    "isbn": "9780062407801",
-    "tags": [
-      "Prompt Design"
-    ],
-    "timeCommitment": "3hr+",
-    "title_cn": "永不妥协",
-    "implication_cn": "像生死攸关一样去谈判。"
-  },
-  {
-    "type": "book",
     "title": "Designing Your Life",
     "author": "Bill Burnett",
     "stage": "Craft",
@@ -666,22 +602,6 @@
   },
   {
     "type": "book",
-    "title": "The 48 Laws of Power",
-    "author": "Robert Greene",
-    "stage": "Judgment",
-    "implication": "A masterclass in strategy, leverage, and human nature.",
-    "deepThinkingBridge": "Law 28: 'Enter action with boldness.' In the AI era, the cautious companies that wait for perfect models get disrupted by the bold ones who ship, learn, and iterate. Greene's laws map eerily well to the dynamics of the AI race.",
-    "url": "https://www.google.com/search?q=The+48+Laws+of+Power+by+Robert+Greene",
-    "isbn": "9780140280197",
-    "tags": [
-      "Strategy"
-    ],
-    "timeCommitment": "3hr+",
-    "title_cn": "权力的 48 条法则",
-    "implication_cn": "策略、杠杆与人性的大师课。"
-  },
-  {
-    "type": "book",
     "title": "Start With Why",
     "author": "Simon Sinek",
     "stage": "Judgment",
@@ -727,22 +647,6 @@
     "timeCommitment": "3hr+",
     "title_cn": "另一种选择",
     "implication_cn": "面对逆境，建立韧性，重新找到喜悦。"
-  },
-  {
-    "type": "book",
-    "title": "Surrounded by Idiots",
-    "author": "Thomas Erikson",
-    "stage": "Judgment",
-    "implication": "The four types of human behavior and how to communicate with each.",
-    "deepThinkingBridge": "AI personalization is still crude. Erikson's DISC framework—Red, Yellow, Green, Blue—is a simple mental model for designing AI interfaces that adapt their tone and interaction style to different user types.",
-    "url": "https://www.google.com/search?q=Surrounded+by+Idiots+by+Thomas+Erikson",
-    "isbn": "9781250179784",
-    "tags": [
-      "Mental Models"
-    ],
-    "timeCommitment": "3hr+",
-    "title_cn": "被白痴包围",
-    "implication_cn": "四种人类行为类型及沟通之道。"
   },
   {
     "type": "video",
@@ -876,39 +780,6 @@
   },
   {
     "type": "book",
-    "title": "Just Work",
-    "author": "Kim Scott",
-    "stage": "Systems Thinking",
-    "implication": "Get sh*t done, fast and fair.",
-    "deepThinkingBridge": "Scott argues that workplace injustice is a bug, not a feature—and the same applies to AI systems. Building fair AI products requires the same intentional design against bias that building fair teams does.",
-    "url": "https://www.google.com/search?q=Just+Work+by+Kim+Scott",
-    "isbn": "9781250179937",
-    "tags": [
-      "Responsible AI",
-      "Strategy"
-    ],
-    "timeCommitment": "3hr+",
-    "title_cn": "公平工作",
-    "implication_cn": "快速、公平地把事情做成。"
-  },
-  {
-    "type": "book",
-    "title": "Leaders Eat Last",
-    "author": "Simon Sinek",
-    "stage": "Systems Thinking",
-    "implication": "Why some teams pull together and others don't.",
-    "deepThinkingBridge": "Sinek's 'Circle of Safety' concept explains why the best AI teams ship faster—psychological safety lets people experiment, fail, and learn. In AI, where every week brings a new paradigm, teams that can't fail fast die slow.",
-    "url": "https://www.google.com/search?q=Leaders+Eat+Last+by+Simon+Sinek",
-    "isbn": "9781591845324",
-    "tags": [
-      "Strategy"
-    ],
-    "timeCommitment": "3hr+",
-    "title_cn": "领袖最后吃饭",
-    "implication_cn": "为什么有些团队凝聚一心，另一些却一盘散沙。"
-  },
-  {
-    "type": "book",
     "title": "The Ride of a Lifetime",
     "author": "Robert Iger",
     "stage": "Systems Thinking",
@@ -970,22 +841,6 @@
     "timeCommitment": "3hr+",
     "title_cn": "向前一步",
     "implication_cn": "女性、工作与领导意志。"
-  },
-  {
-    "type": "book",
-    "title": "The Pardon",
-    "author": "Jeffrey Toobin",
-    "stage": "Systems Thinking",
-    "implication": "The politics of presidential mercy.",
-    "deepThinkingBridge": "Power, accountability, and the systems that check them. As AI concentrates unprecedented power in fewer hands, understanding how authority is granted—and revoked—becomes essential context for the governance debates ahead.",
-    "url": "https://www.google.com/search?q=The+Pardon+by+Jeffrey+Toobin",
-    "isbn": "9781668021538",
-    "tags": [
-      "Strategy"
-    ],
-    "timeCommitment": "3hr+",
-    "title_cn": "赦免",
-    "implication_cn": "总统特赦的政治博弈。"
   },
   {
     "type": "article",

@@ -26,7 +26,7 @@ const NEWSLETTERS = [
 ]
 
 const SHOWS = [
-  { name: "Lenny's Podcast", url: 'https://www.lennyspodcast.com', annotation: 'Best show for AI product builders. Every episode is a masterclass in shipping AI.', annotation_cn: 'AI 产品构建者的最佳节目。每集都是发布 AI 产品的大师课。' },
+  { name: "Lenny's Podcast", url: 'https://www.youtube.com/@LennysPodcast', annotation: 'Best show for AI product builders. Every episode is a masterclass in shipping AI.', annotation_cn: 'AI 产品构建者的最佳节目。每集都是发布 AI 产品的大师课。' },
   { name: 'Lex Fridman Podcast', url: 'https://lexfridman.com/podcast', annotation: 'Long-form with the people building AI. Dense but irreplaceable.', annotation_cn: '与 AI 构建者的长篇深度对话。信息密集，不可替代。' },
   { name: 'Dive Club', url: 'https://www.youtube.com/@joindiveclub', annotation: 'Deep dives into AI tools and workflows for designers and builders.', annotation_cn: '为设计师和构建者深入探索 AI 工具与工作流。' },
   { name: 'UX Coffee', url: 'https://open.spotify.com/show/3Nx0Z9ZkIsJAWg4gGv2tWA', annotation: 'Conversations on UX craft, career, and the future of design.', annotation_cn: '关于 UX 设计技艺、职业发展与设计未来的对话。' },

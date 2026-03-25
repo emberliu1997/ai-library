@@ -96,7 +96,7 @@ export function Card({ item, onSelect, index = 0 }) {
 
     if (isExternalLink) {
       return (
-        <a href={item.url} target="_blank" rel="noopener noreferrer" className="block relative overflow-hidden" style={{ aspectRatio }} aria-label={`${cfg.label}: ${item.title}`} tabIndex={-1}>
+        <a href={item.url} target="_blank" rel="noopener noreferrer" className="relative overflow-hidden" style={fixedImgStyle} aria-label={`${cfg.label}: ${item.title}`} tabIndex={-1}>
           {imageContent}
         </a>
       )
