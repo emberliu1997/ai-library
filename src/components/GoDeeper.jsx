@@ -16,7 +16,7 @@ const STAGE_META = {
   },
   Judgment: {
     number: '03',
-    spotlight: 'Why AI evals are the hottest new skill in AI (with Hamel Husain & Shreya Shankar)',
+    spotlight: 'How to Build a Beloved AI Product',
   },
   'Systems Thinking': {
     number: '04',
