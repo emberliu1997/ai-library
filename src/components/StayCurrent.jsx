@@ -17,12 +17,12 @@ const PEOPLE = [
 ]
 
 const NEWSLETTERS = [
-  { name: "Lenny's Newsletter", url: 'https://www.lennysnewsletter.com', annotation: 'Deep-dives on AI product strategy, prompting, and evals from the people shipping it.', annotation_cn: '来自一线团队的 AI 产品策略、提示词与评估深度解析。', cadence: 'Weekly' },
-  { name: 'TLDR AI', url: 'https://tldr.tech/ai', annotation: '5-minute daily brief. Use it to stay aware, not to go deep.', annotation_cn: '5 分钟每日简报。用来保持感知，而非深入研究。', cadence: 'Daily' },
   { name: 'Every', url: 'https://every.to/', annotation: 'A bundle of newsletters on AI, business, and the future of work by independent writers.', annotation_cn: '由独立作者撰写的 AI、商业与未来工作主题精选通讯合集。', cadence: 'Daily' },
   { name: 'The AI Valley', url: 'https://www.theaivalley.com/', annotation: 'Curated AI news and tools for builders and curious minds.', annotation_cn: '为构建者和好奇心旺盛的人精选的 AI 新闻与工具。', cadence: 'Daily' },
-  { name: 'The Looking Glass', url: 'https://lg.substack.com/', annotation: 'Julie Zhuo on leadership, design, and building — the most thoughtful writing on what it means to do great work.', annotation_cn: 'Julie Zhuo 关于领导力、设计与创造的思考——关于如何做出卓越工作，最有深度的写作。', cadence: 'Weekly' },
+  { name: 'TLDR AI', url: 'https://tldr.tech/ai', annotation: '5-minute daily brief. Use it to stay aware, not to go deep.', annotation_cn: '5 分钟每日简报。用来保持感知，而非深入研究。', cadence: 'Daily' },
   { name: "Dan Koe's Newsletter", url: 'https://thedankoe.com/blog/', annotation: 'On building a meaningful creative business — ideas, writing, and the philosophy of independent work.', annotation_cn: '关于创造有意义的创意事业——想法、写作与独立工作的哲学。', cadence: 'Weekly' },
+  { name: "Lenny's Newsletter", url: 'https://www.lennysnewsletter.com', annotation: 'Deep-dives on AI product strategy, prompting, and evals from the people shipping it.', annotation_cn: '来自一线团队的 AI 产品策略、提示词与评估深度解析。', cadence: 'Weekly' },
+  { name: 'The Looking Glass', url: 'https://lg.substack.com/', annotation: 'Julie Zhuo on leadership, design, and building — the most thoughtful writing on what it means to do great work.', annotation_cn: 'Julie Zhuo 关于领导力、设计与创造的思考——关于如何做出卓越工作，最有深度的写作。', cadence: 'Weekly' },
 ]
 
 const SHOWS = [
