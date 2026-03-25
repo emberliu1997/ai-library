@@ -55,6 +55,9 @@ export function Card({ item, onSelect, index = 0 }) {
 
   // For books: use a button. For links: use an anchor.
   const isExternalLink = item.type !== 'book' && cfg.isLink && item.url && item.url !== '#'
+  const isBook = item.type === 'book'
+  const isVideo = item.type === 'video' || item.type === 'podcast'
+  const isFixedCard = isBook || isVideo
 
   function ImageArea() {
     const imageContent = (
@@ -88,7 +91,8 @@ export function Card({ item, onSelect, index = 0 }) {
       </>
     )
 
-    const aspectRatio = ASPECT[item.type] || (item.image ? '16/9' : undefined)
+    const aspectRatio = isFixedCard ? undefined : (ASPECT[item.type] || (item.image ? '16/9' : undefined))
+    const fixedImgStyle = isFixedCard ? { flex: 1, minHeight: 0, position: 'relative', overflow: 'hidden', width: '100%', display: 'block' } : { aspectRatio }
 
     if (isExternalLink) {
       return (
@@ -98,7 +102,7 @@ export function Card({ item, onSelect, index = 0 }) {
       )
     }
     return (
-      <button onClick={() => onSelect?.(item)} className="block relative overflow-hidden w-full" style={{ aspectRatio }} aria-label={`Open ${item.title}`} tabIndex={-1}>
+      <button onClick={() => onSelect?.(item)} className="relative overflow-hidden w-full" style={fixedImgStyle} aria-label={`Open ${item.title}`} tabIndex={-1}>
         {imageContent}
       </button>
     )
@@ -151,7 +155,12 @@ export function Card({ item, onSelect, index = 0 }) {
       {/* Outer wrapper — position:relative so bookmark can be absolutely placed */}
       <div
         className="rounded-2xl overflow-hidden group cursor-pointer relative"
-        style={{ background: '#111010', border: '1px solid #1F1D1A' }}
+        style={{
+          background: '#111010',
+          border: '1px solid #1F1D1A',
+          ...(isBook && { display: 'flex', flexDirection: 'column', aspectRatio: '0.618/1' }),
+          ...(isVideo && { display: 'flex', flexDirection: 'column', aspectRatio: '16/11' }),
+        }}
         onMouseEnter={(e) => {
           e.currentTarget.style.boxShadow = '0 0 0 1px rgba(var(--th-accent-rgb),0.18), 0 10px 28px rgba(0,0,0,0.55)'
           e.currentTarget.style.borderColor = 'rgba(var(--th-accent-rgb),0.2)'
