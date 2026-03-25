@@ -281,6 +281,22 @@
   },
   {
     "type": "book",
+    "title": "Refactoring UI",
+    "author": "Adam Wathan & Steve Schoger",
+    "stage": "Craft",
+    "implication": "Design great interfaces even if you're not a designer.",
+    "deepThinkingBridge": "Every AI product ships a UI. Wathan and Schoger's visual principles — spacing, hierarchy, color, shadow — are the craft layer that separates polished AI tools from rough prototypes. This is the fastest way to close the gap.",
+    "url": "https://refactoringui.com/",
+    "tags": [
+      "Design Patterns",
+      "AI UX"
+    ],
+    "timeCommitment": "3hr+",
+    "title_cn": "重构 UI",
+    "implication_cn": "即使你不是设计师，也能设计出出色的界面。"
+  },
+  {
+    "type": "book",
     "title": "About Face",
     "author": "Alan Cooper",
     "stage": "Craft",
