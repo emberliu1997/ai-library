@@ -45,13 +45,13 @@ export function Card({ item, onSelect, index = 0 }) {
   const isCN = lang === 'cn'
   const cfg = TYPE_CONFIG[item.type] || TYPE_CONFIG.article
   const videoId = (item.type === 'video' || item.type === 'podcast') ? extractVideoId(item.url) : null
-  const thumbnail = videoId ? `https://img.youtube.com/vi/${videoId}/mqdefault.jpg` : null
+  const thumbnail = videoId ? `https://img.youtube.com/vi/${videoId}/mqdefault.jpg` : (item.image || null)
   const coverUrl = item.isbn ? `https://covers.openlibrary.org/b/isbn/${item.isbn}-L.jpg` : null
   const palette = BOOK_PALETTES[titleHash(item.title)]
   const displayTitle = isCN ? (item.title_cn || item.title) : item.title
   const displayImplication = isCN ? (item.implication_cn || item.implication) : item.implication
   const creator = item.creator || item.author || ''
-  const hasImage = ASPECT[item.type] !== null
+  const hasImage = ASPECT[item.type] !== null || !!item.image
 
   // For books: use a button. For links: use an anchor.
   const isExternalLink = item.type !== 'book' && cfg.isLink && item.url && item.url !== '#'
@@ -80,23 +80,25 @@ export function Card({ item, onSelect, index = 0 }) {
         <div className="absolute inset-0" style={{ background: 'rgba(0,0,0,0.22)' }} />
         {cfg.Icon && (
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="flex items-center justify-center rounded-full transition-all duration-200 group-hover:scale-110" style={{ width: 38, height: 38, background: 'rgba(200,151,74,0.12)', border: '1px solid rgba(200,151,74,0.3)', backdropFilter: 'blur(8px)' }}>
-              <cfg.Icon className="w-3.5 h-3.5" style={{ color: '#C8974A', fill: item.type === 'video' ? '#C8974A' : 'none', strokeWidth: item.type === 'podcast' ? 1.5 : 0 }} />
+            <div className="flex items-center justify-center rounded-full transition-all duration-200 group-hover:scale-110" style={{ width: 38, height: 38, background: 'rgba(var(--th-accent-rgb),0.12)', border: '1px solid rgba(var(--th-accent-rgb),0.3)', backdropFilter: 'blur(8px)' }}>
+              <cfg.Icon className="w-3.5 h-3.5" style={{ color: 'var(--th-accent)', fill: item.type === 'video' ? 'var(--th-accent)' : 'none', strokeWidth: item.type === 'podcast' ? 1.5 : 0 }} />
             </div>
           </div>
         )}
       </>
     )
 
+    const aspectRatio = ASPECT[item.type] || (item.image ? '16/9' : undefined)
+
     if (isExternalLink) {
       return (
-        <a href={item.url} target="_blank" rel="noopener noreferrer" className="block relative overflow-hidden" style={{ aspectRatio: ASPECT[item.type] }} aria-label={`${cfg.label}: ${item.title}`} tabIndex={-1}>
+        <a href={item.url} target="_blank" rel="noopener noreferrer" className="block relative overflow-hidden" style={{ aspectRatio }} aria-label={`${cfg.label}: ${item.title}`} tabIndex={-1}>
           {imageContent}
         </a>
       )
     }
     return (
-      <button onClick={() => onSelect?.(item)} className="block relative overflow-hidden w-full" style={{ aspectRatio: ASPECT[item.type] }} aria-label={`Open ${item.title}`} tabIndex={-1}>
+      <button onClick={() => onSelect?.(item)} className="block relative overflow-hidden w-full" style={{ aspectRatio }} aria-label={`Open ${item.title}`} tabIndex={-1}>
         {imageContent}
       </button>
     )
@@ -106,7 +108,7 @@ export function Card({ item, onSelect, index = 0 }) {
     const content = (
       <div className="p-3.5">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-xs font-medium uppercase tracking-widest" style={{ color: '#C8974A', letterSpacing: '0.12em', opacity: 0.7 }}>
+          <span className="text-xs font-medium uppercase tracking-widest" style={{ color: 'var(--th-accent)', letterSpacing: '0.12em', opacity: 0.7 }}>
             {cfg.label}
           </span>
         </div>
@@ -151,8 +153,8 @@ export function Card({ item, onSelect, index = 0 }) {
         className="rounded-2xl overflow-hidden group cursor-pointer relative"
         style={{ background: '#111010', border: '1px solid #1F1D1A' }}
         onMouseEnter={(e) => {
-          e.currentTarget.style.boxShadow = '0 0 0 1px rgba(200,151,74,0.18), 0 10px 28px rgba(0,0,0,0.55)'
-          e.currentTarget.style.borderColor = 'rgba(200,151,74,0.2)'
+          e.currentTarget.style.boxShadow = '0 0 0 1px rgba(var(--th-accent-rgb),0.18), 0 10px 28px rgba(0,0,0,0.55)'
+          e.currentTarget.style.borderColor = 'rgba(var(--th-accent-rgb),0.2)'
         }}
         onMouseLeave={(e) => {
           e.currentTarget.style.boxShadow = 'none'
@@ -171,12 +173,12 @@ export function Card({ item, onSelect, index = 0 }) {
               backdropFilter: 'blur(10px)',
               WebkitBackdropFilter: 'blur(10px)',
               padding: '10px 14px 14px',
-              borderTop: '1px solid rgba(200,151,74,0.18)',
+              borderTop: '1px solid rgba(var(--th-accent-rgb),0.18)',
             }}
           >
             <p
               className="text-xs font-bold uppercase tracking-widest mb-1"
-              style={{ color: '#C8974A', letterSpacing: '0.15em' }}
+              style={{ color: 'var(--th-accent)', letterSpacing: '0.15em' }}
             >
               {t('why_this_one')}
             </p>
