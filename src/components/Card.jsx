@@ -108,11 +108,11 @@ export function Card({ item, onSelect, index = 0 }) {
     const content = (
       <div className="p-3.5">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-xs font-medium uppercase tracking-widest" style={{ color: 'var(--th-accent)', letterSpacing: '0.12em', opacity: 0.7 }}>
+          <span className="text-xs font-medium uppercase tracking-widest" style={{ color: 'var(--th-accent)', letterSpacing: '0.12em' }}>
             {cfg.label}
           </span>
         </div>
-        <p className="text-[13px] font-medium leading-snug line-clamp-2" style={{ color: '#EDE5D8', lineHeight: 1.45 }}>
+        <p className="text-[15px] font-medium leading-snug line-clamp-2" style={{ color: '#EDE5D8', lineHeight: 1.45 }}>
           {displayTitle}
         </p>
         {displayImplication && (

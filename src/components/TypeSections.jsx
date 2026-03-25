@@ -36,11 +36,12 @@ function extractVideoId(url) {
 }
 
 const TYPE_COLORS = {
-  video:   '#5B8CFF',
-  podcast: '#A855F7',
-  book:    '#C8974A',
-  article: '#4CAF8A',
-  website: '#4CAF8A',
+  video:      '#8AACBE',
+  podcast:    '#C47A6B',
+  book:       '#C8974A',
+  article:    '#94A97A',
+  website:    '#7BA38E',
+  newsletter: '#BF9070',
 }
 
 /** Floating thumbnail preview — always dark-themed (tooltip style) */

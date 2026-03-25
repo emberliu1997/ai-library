@@ -5,11 +5,11 @@ import { useLanguage } from '../context/LanguageContext'
 import { useTheme } from '../context/ThemeContext'
 
 const TYPE_META = {
-  video:   { label: 'Video',   color: '#5B8CFF' },
-  podcast: { label: 'Podcast', color: '#A855F7' },
+  video:   { label: 'Video',   color: '#8AACBE' },
+  podcast: { label: 'Podcast', color: '#C47A6B' },
   book:    { label: 'Book',    color: '#C8974A' },
-  article: { label: 'Article', color: '#4CAF8A' },
-  website: { label: 'Site',    color: '#4CAF8A' },
+  article: { label: 'Article', color: '#94A97A' },
+  website: { label: 'Site',    color: '#7BA38E' },
 }
 
 const TIME_LABELS = {

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Menu } from 'lucide-react'
 import { useLibrary } from './hooks/useLibrary'
 import { useTheme } from './context/ThemeContext'
@@ -106,49 +107,59 @@ function App() {
         id="main-content"
         className="flex flex-col min-h-screen lg:ml-[240px] mobile-content-pb"
       >
-        {activeView === 'start-here' && (
-          <StartHere
-            items={startHereItems}
-            isBookmarked={isBookmarked}
-            onBookmarkToggle={toggleBookmark}
-            onSelectBook={setSelectedItem}
-          />
-        )}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeView}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -6 }}
+            transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+          >
+            {activeView === 'start-here' && (
+              <StartHere
+                items={startHereItems}
+                isBookmarked={isBookmarked}
+                onBookmarkToggle={toggleBookmark}
+                onSelectBook={setSelectedItem}
+              />
+            )}
 
-        {activeView === 'go-deeper' && (
-          <GoDeeper
-            allItems={allItems}
-            activeStage={activeStage}
-            onStageChange={setActiveStage}
-            isBookmarked={isBookmarked}
-            onBookmarkToggle={toggleBookmark}
-            onSelectBook={setSelectedItem}
-          />
-        )}
+            {activeView === 'go-deeper' && (
+              <GoDeeper
+                allItems={allItems}
+                activeStage={activeStage}
+                onStageChange={setActiveStage}
+                isBookmarked={isBookmarked}
+                onBookmarkToggle={toggleBookmark}
+                onSelectBook={setSelectedItem}
+              />
+            )}
 
-        {activeView === 'people' && (
-          <PeopleIFollow />
-        )}
+            {activeView === 'people' && (
+              <PeopleIFollow />
+            )}
 
-        {activeView === 'reference' && (
-          <Reference
-            items={filteredItems}
-            allItems={allItems}
-            activeStage={activeStage}
-            onStageChange={setActiveStage}
-            activeType={activeType}
-            onTypeChange={setActiveType}
-            activeTags={activeTags}
-            onTagToggle={toggleTag}
-            activeTime={activeTime}
-            onTimeChange={setActiveTime}
-            searchQuery={searchQuery}
-            onSearchChange={setSearchQuery}
-            isBookmarked={isBookmarked}
-            onBookmarkToggle={toggleBookmark}
-            onSelectBook={setSelectedItem}
-          />
-        )}
+            {activeView === 'reference' && (
+              <Reference
+                items={filteredItems}
+                allItems={allItems}
+                activeStage={activeStage}
+                onStageChange={setActiveStage}
+                activeType={activeType}
+                onTypeChange={setActiveType}
+                activeTags={activeTags}
+                onTagToggle={toggleTag}
+                activeTime={activeTime}
+                onTimeChange={setActiveTime}
+                searchQuery={searchQuery}
+                onSearchChange={setSearchQuery}
+                isBookmarked={isBookmarked}
+                onBookmarkToggle={toggleBookmark}
+                onSelectBook={setSelectedItem}
+              />
+            )}
+          </motion.div>
+        </AnimatePresence>
       </main>
 
       <ThinkingDrawer
