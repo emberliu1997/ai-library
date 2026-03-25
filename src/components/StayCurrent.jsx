@@ -12,7 +12,7 @@ const PEOPLE = [
   { name: 'Lenny Rachitsky', handle: '@lennysan', platform: 'X / Newsletter', url: 'https://x.com/lennysan', annotation: 'Deep dives on AI product strategy from someone who talks to everyone building it.', annotation_cn: '与所有 AI 构建者对话后得出的深度产品策略洞察。', tags: ['Product', 'Strategy'] },
   { name: 'Amanda Askell', handle: '@amandaaskell', platform: 'X', url: 'https://x.com/amandaaskell', annotation: "Guardian of Claude's vibes. Expert on AI personality and character.", annotation_cn: 'Claude 性格与氛围的守护者。AI 人格与角色设计专家。', tags: ['Design', 'Ethics'] },
   { name: 'Boris Cherny', handle: '@bcherny', platform: 'X', url: 'https://x.com/bcherny', annotation: 'Creator of Claude Code. Sharp thinking on developer tools and AI agents.', annotation_cn: 'Claude Code 创始人。对开发者工具与 AI 智能体有深刻洞见。', tags: ['Agents', 'Dev Tools'] },
-  { name: 'Shreya Shankar', handle: '@sh_reya', platform: 'X', url: 'https://x.com/sh_reya', annotation: 'ML engineer doing the most rigorous thinking on AI evals and data pipelines.', annotation_cn: '在 AI 评估与数据管道方面思考最为严谨的 ML 工程师。', tags: ['Evals', 'Research'] },
+  { name: 'Mackenzie Child', handle: '@mackenziechild', platform: 'X', url: 'https://x.com/mackenziechild', annotation: 'Designer and creator building in public — sharp eye for craft and product aesthetics.', annotation_cn: '在公开场合创作的设计师与创作者——对工艺与产品美学有独到见解。', tags: ['Design', 'AI UX'] },
   { name: 'Ryo Lu', handle: '@ryolu_', platform: 'X', url: 'https://x.com/ryolu_', annotation: 'Head of design at Cursor. Best signal on AI-native product design.', annotation_cn: 'Cursor 设计负责人。AI 原生产品设计的最佳信号源。', tags: ['Design', 'AI UX'] },
 ]
 
