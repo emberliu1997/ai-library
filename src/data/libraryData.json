@@ -495,24 +495,6 @@
   },
   {
     "type": "podcast",
-    "title": "Why AI evals are the hottest new skill in AI (with Hamel Husain & Shreya Shankar)",
-    "creator": "Hamel Husain & Shreya Shankar",
-    "show": "Lenny's Podcast",
-    "stage": "Judgment",
-    "implication": "How to go from 'it feels right' to 'here's how we measure it.'",
-    "url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
-    "tags": [
-      "Evals"
-    ],
-    "timeCommitment": "1hr",
-    "startHere": true,
-    "startHereReason": "The shift from 'feels right' to 'here's how we measure it.'",
-    "title_cn": "为什么 AI 评估是最热门的新技能",
-    "implication_cn": "如何从「感觉对了」到「这是我们的衡量方式」。",
-    "startHereReason_cn": "从「感觉对了」到「这是我们的衡量方式」的转变。"
-  },
-  {
-    "type": "podcast",
     "title": "Emily Campbell — AI UX Deep Dive",
     "creator": "Emily Campbell",
     "show": "Dive Club",
@@ -554,8 +536,26 @@
       "Design Patterns"
     ],
     "timeCommitment": "1hr",
+    "startHere": true,
+    "startHereReason": "The question isn't whether your AI works — it's whether people care.",
     "title_cn": "如何打造深受喜爱的 AI 产品",
-    "implication_cn": "是什么让人们爱上一款 AI 产品，而不是用完就忘。"
+    "implication_cn": "是什么让人们爱上一款 AI 产品，而不是用完就忘。",
+    "startHereReason_cn": "问题不在于你的 AI 能不能用——而在于人们是否真的在乎。"
+  },
+  {
+    "type": "podcast",
+    "title": "Why AI evals are the hottest new skill in AI (with Hamel Husain & Shreya Shankar)",
+    "creator": "Hamel Husain & Shreya Shankar",
+    "show": "Lenny's Podcast",
+    "stage": "Judgment",
+    "implication": "How to go from 'it feels right' to 'here's how we measure it.'",
+    "url": "https://www.youtube.com/watch?v=BsWxPI9UM4c",
+    "tags": [
+      "Evals"
+    ],
+    "timeCommitment": "1hr",
+    "title_cn": "为什么 AI 评估是最热门的新技能",
+    "implication_cn": "如何从「感觉对了」到「这是我们的衡量方式」。"
   },
   {
     "type": "website",
