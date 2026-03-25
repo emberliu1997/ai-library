@@ -17,14 +17,12 @@ const PEOPLE = [
 ]
 
 const NEWSLETTERS = [
-  { name: "Simon Willison's Weblog", url: 'https://simonwillison.net', annotation: 'Daily dispatches from someone who actually builds with LLMs. Best practical signal in AI.', annotation_cn: '真正用 LLM 构建产品的人的每日实战记录。AI 领域最实用的信号源。', cadence: 'Daily' },
   { name: "Lenny's Newsletter", url: 'https://www.lennysnewsletter.com', annotation: 'Deep-dives on AI product strategy, prompting, and evals from the people shipping it.', annotation_cn: '来自一线团队的 AI 产品策略、提示词与评估深度解析。', cadence: 'Weekly' },
   { name: 'TLDR AI', url: 'https://tldr.tech/ai', annotation: '5-minute daily brief. Use it to stay aware, not to go deep.', annotation_cn: '5 分钟每日简报。用来保持感知，而非深入研究。', cadence: 'Daily' },
-  { name: 'Interconnects (Nathan Lambert)', url: 'https://www.interconnects.ai', annotation: 'The clearest writing on how AI models are actually trained and evaluated.', annotation_cn: '关于 AI 模型训练与评估的最清晰写作。', cadence: 'Weekly' },
-  { name: 'Latent Space', url: 'https://www.latent.space', annotation: "Technical but accessible. Covers what's actually happening at the AI frontier.", annotation_cn: '技术深度与可读性兼具。追踪 AI 前沿真正发生的事。', cadence: 'Weekly' },
   { name: 'Every', url: 'https://every.to/', annotation: 'A bundle of newsletters on AI, business, and the future of work by independent writers.', annotation_cn: '由独立作者撰写的 AI、商业与未来工作主题精选通讯合集。', cadence: 'Daily' },
   { name: 'The AI Valley', url: 'https://www.theaivalley.com/', annotation: 'Curated AI news and tools for builders and curious minds.', annotation_cn: '为构建者和好奇心旺盛的人精选的 AI 新闻与工具。', cadence: 'Daily' },
   { name: 'The Looking Glass', url: 'https://lg.substack.com/', annotation: 'Julie Zhuo on leadership, design, and building — the most thoughtful writing on what it means to do great work.', annotation_cn: 'Julie Zhuo 关于领导力、设计与创造的思考——关于如何做出卓越工作，最有深度的写作。', cadence: 'Weekly' },
+  { name: "Dan Koe's Newsletter", url: 'https://thedankoe.com/blog/', annotation: 'On building a meaningful creative business — ideas, writing, and the philosophy of independent work.', annotation_cn: '关于创造有意义的创意事业——想法、写作与独立工作的哲学。', cadence: 'Weekly' },
 ]
 
 const SHOWS = [
