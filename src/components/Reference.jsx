@@ -118,7 +118,7 @@ export function Reference({
       >
 
         {/* Top row: search + count + filters toggle + view toggle */}
-        <div className="flex items-center gap-3 py-2.5">
+        <div className="flex items-center gap-3 py-2.5 pr-14 lg:pr-0">
 
           {/* Search */}
           <div className="relative flex-1 max-w-sm">
