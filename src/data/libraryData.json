@@ -585,23 +585,6 @@
   },
   {
     "type": "book",
-    "title": "The Education of a Value Investor",
-    "author": "Guy Spier",
-    "stage": "Judgment",
-    "implication": "A transformative quest for wealth, wisdom, and enlightenment.",
-    "deepThinkingBridge": "Spier's insight—that your environment shapes your decisions more than your analysis—is directly applicable to AI-assisted decision making. The best AI copilot means nothing if you haven't designed the right decision environment around it.",
-    "url": "https://www.google.com/search?q=The+Education+of+a+Value+Investor+by+Guy+Spier",
-    "isbn": "9781137471246",
-    "tags": [
-      "Mental Models",
-      "Strategy"
-    ],
-    "timeCommitment": "3hr+",
-    "title_cn": "价值投资者的自我修养",
-    "implication_cn": "追求财富、智慧与启迪的蜕变之旅。"
-  },
-  {
-    "type": "book",
     "title": "Start With Why",
     "author": "Simon Sinek",
     "stage": "Systems Thinking",
@@ -809,22 +792,6 @@
     "timeCommitment": "3hr+",
     "title_cn": "你的下五步棋",
     "implication_cn": "掌握商业战略的艺术。"
-  },
-  {
-    "type": "book",
-    "title": "The Little Book of Common Sense Investing",
-    "author": "John C. Bogle",
-    "stage": "Systems Thinking",
-    "implication": "The only way to guarantee your fair share of market returns.",
-    "deepThinkingBridge": "Bogle's thesis—that simplicity beats complexity over time—is the contrarian insight in AI product design. While everyone races to add features, the winning products will be the simplest ones that compound user trust over years.",
-    "url": "https://www.google.com/search?q=The+Little+Book+of+Common+Sense+Investing+by+John+C.+Bogle",
-    "isbn": "9781119404507",
-    "tags": [
-      "Strategy"
-    ],
-    "timeCommitment": "3hr+",
-    "title_cn": "共同基金常识",
-    "implication_cn": "保证获得市场公平份额的唯一方法。"
   },
   {
     "type": "book",
