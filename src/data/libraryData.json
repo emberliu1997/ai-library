@@ -293,7 +293,8 @@
     ],
     "timeCommitment": "3hr+",
     "title_cn": "重构 UI",
-    "implication_cn": "即使你不是设计师，也能设计出出色的界面。"
+    "implication_cn": "即使你不是设计师，也能设计出出色的界面。",
+    "image": "/refactorUI.png"
   },
   {
     "type": "book",
